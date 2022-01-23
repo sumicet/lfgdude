@@ -1,5 +1,5 @@
 """
-WSGI config for frenweb project.
+WSGI config for lfgdude project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'frenweb.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'lfgdude.settings')
 
 application = get_wsgi_application()
