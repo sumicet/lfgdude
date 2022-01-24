@@ -39,7 +39,7 @@ There are thousands of LFG (look for group) discord servers, but none of them pr
 ### Technologies
 
 #### Frontend
-- React + Typescript + Tailwind CSS
+- (CRA) React + Typescript + Tailwind CSS
 
 #### Backend
 - Django
