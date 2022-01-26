@@ -9,15 +9,15 @@ module.exports = {
                 xl: '1280px',
                 '2xl': '1536px',
             },
-            boxShadow: {},
             fontFamily: {
-                text: 'Rubik, Arial, sans-serif',
-                code: 'Courier Prime, monospace',
+                text: ['Rubik', 'ui-sans-serif', 'system-ui', 'Segoe UI Symbol', 'Arial'],
+                code: ['Courier Prime', 'monospace'],
             },
             fontSize: {
                 base: '0.875rem',
                 small: '0.75rem',
                 large: '1rem',
+                extraLarge: '1.5rem',
             },
             lineHeight: {
                 base: '120%',
@@ -31,7 +31,7 @@ module.exports = {
                 light: '#1E1E21',
                 extraLight: '#34343F',
                 onDark: '#0D0D0D',
-                accent: '#5200FF',
+                accent: '#7045de',
                 textExtraLight: '#FFFFFF',
                 textLight: 'rgba(255, 255, 255, 0.8)',
                 textMedium: 'rgba(255, 255, 255, 0.6)',
@@ -39,12 +39,12 @@ module.exports = {
                 textExtraDark: 'rgba(255, 255, 255, 0.2)', // mostly for placeholders
             },
             spacing: {
-                1: '0.3125rem',
-                2: '0.625rem',
-                3: '0.9375rem',
-                4: '1.25rem',
-                5: '1.875rem',
-                6: '2.5rem',
+                1: '0.3125rem', // 5px
+                2: '0.625rem', // 10px
+                3: '0.9375rem', // 15px
+                4: '1.25rem', // 20px
+                5: '1.875rem', // 30px
+                6: '2.5rem', // 40px
             },
         },
     },

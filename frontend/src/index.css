@@ -1,15 +1,70 @@
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-        'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+    display: flex;
+    flex: 1;
+    height: 100%;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-weight: 300;
+    src: local('Rubik'), url(./assets/fonts/Rubik-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: local('Rubik'), url(./assets/fonts/Rubik-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-weight: 500;
+    src: local('Rubik'), url(./assets/fonts/Rubik-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-weight: 600;
+    src: local('Rubik'), url(./assets/fonts/Rubik-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-weight: 700;
+    src: local('Rubik'), url(./assets/fonts/Rubik-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-weight: 900;
+    src: local('Rubik'), url(./assets/fonts/Rubik-Black.ttf);
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@layer utilities {
+    @variants responsive {
+        .text-shadow-neon {
+            text-shadow: #fff 0px 0px 4px, #5200ff 0px 0px 2px, #5200ff 0px 0px 3px,
+                #5200ff 0px 0px 4px, #5200ff 0px 0px 5px, #5200ff 0px 0px 7px, #5200ff 0px 0px 20px,
+                #5200ff 0px 0px 30px, #5200ff 0px 0px 40px;
+        }
+        .svg-extra-light * path {
+            fill: white;
+        }
+        .svg-light * path {
+            fill: rgba(255, 255, 255, 0.8);
+        }
+        .neon {
+            filter: drop-shadow(#fff 0px 0px 1px) drop-shadow(#5200ff 0px 0px 2px)
+                drop-shadow(#5200ff 0px 0px 3px) drop-shadow(#5200ff 0px 0px 10px);
+        }
+    }
+}
