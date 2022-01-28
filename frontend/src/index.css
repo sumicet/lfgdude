@@ -67,7 +67,7 @@ code {
 
         .neon {
             filter: drop-shadow(#fff 0px 0px 1px) drop-shadow(#5200ff 0px 0px 2px)
-                drop-shadow(#5200ff 0px 0px 3px) drop-shadow(#5200ff 0px 0px 10px);
+                drop-shadow(#5200ff 0px 0px 3px);
         }
 
         input {

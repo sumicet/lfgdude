@@ -47,6 +47,24 @@ const lobbies: Lobby[] = [
             max: 6,
         },
     },
+    {
+        game: {
+            id: '1',
+            name: 'Among Us',
+            image: 'https://play-lh.googleusercontent.com/8ddL1kuoNUB5vUvgDVjYY3_6HwQcrg1K2fd_R8soD-e2QYj8fT9cfhfh3G0hnSruLKec',
+        },
+        leader: {
+            id: '2',
+            image: 'https://cdn.realsport101.com/images/ncavvykf/epicstream/1291d35e00f077741819c23a19e5043c0a54e8fc-864x382.png?rect=93,0,679,382&w=700&h=394&dpr=2',
+            username: 'Nezuko',
+        },
+        title: 'Such wow join join long title here!!!',
+        tags: ['idk', 'competitive'],
+        players: {
+            num: 5,
+            max: 6,
+        },
+    },
 ];
 
 const Lobbies: React.FC<LobbiesProps> = ({ className }) => {
