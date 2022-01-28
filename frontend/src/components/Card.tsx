@@ -44,7 +44,7 @@ const Card: React.FC<CardProps> = ({ lobby }) => {
                     <Text color='medium'>{lobby.leader.username}</Text>
                 </div>
             </div>
-            <Text className='mt-2' size='large' rows={2}>
+            <Text className={`mt-2 h-[2.4rem]`} size='large' rows={2}>
                 {lobby.title}
             </Text>
 
