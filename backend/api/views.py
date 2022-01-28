@@ -12,3 +12,7 @@ def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     ret = "Question: {} - Published {}".format(question.question_text, question.pub_date)
     return HttpResponse(ret)
+
+
+def discord_auth(request):
+    return HttpResponse()
