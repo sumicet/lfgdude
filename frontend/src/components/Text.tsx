@@ -1,17 +1,26 @@
-import { memo, ReactElement } from 'react';
+import { memo } from 'react';
 
 interface TextProps {
+    color?: 'extra-light' | 'dark' | 'extra-dark';
     weight?: 'bold' | 'light';
     theme?: 'code' | 'neon';
     size?: 'extra-large' | 'large' | 'small';
     className?: string;
-    children: string;
+    children: any;
 }
 
-const Text: React.FC<TextProps> = ({ weight, theme, size, className = '', children }) => {
+const Text: React.FC<TextProps> = ({ color, weight, theme, size, className = '', children }) => {
     return (
         <p
-            className={`text-textLight ${className} ${
+            className={`${
+                color === 'extra-light'
+                    ? 'text-textExtraLight'
+                    : color === 'dark'
+                    ? 'text-textDark'
+                    : color === 'extra-dark'
+                    ? 'text-textExtraDark'
+                    : 'text-textLight'
+            } ${className} ${
                 size === 'extra-large'
                     ? 'text-extraLarge'
                     : size === 'large'
