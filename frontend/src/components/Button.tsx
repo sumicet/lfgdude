@@ -7,14 +7,15 @@ interface ButtonProps {
     onClick?: () => void;
     color?: 'light' | 'extra-light';
     link?: string;
+    className?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ onClick, color, text, Icon, link }) => {
+const Button: React.FC<ButtonProps> = ({ onClick, color, text, Icon, link, className }) => {
     return (
-        <ButtonWrapper link={link}>
+        <ButtonWrapper link={link} className={className}>
             <button
                 onClick={onClick}
-                className={`flex h-fit py-2 px-4 rounded-base ease-in-out duration-200 ${
+                className={`flex h-fit w-fit py-2 px-4 rounded-base ease-in-out duration-200 ${
                     color === 'light' ? 'hover:bg-extraLight' : 'hover:neon'
                 } ${
                     color === 'light'
@@ -22,7 +23,7 @@ const Button: React.FC<ButtonProps> = ({ onClick, color, text, Icon, link }) => 
                         : color === 'extra-light'
                         ? 'bg-extraLight'
                         : 'bg-accent'
-                }`}
+                } ${!link && className}`}
             >
                 {Icon ? (
                     <Chip text={text} Icon={Icon} color='extra-light' noHoverEffect />
@@ -36,6 +37,20 @@ const Button: React.FC<ButtonProps> = ({ onClick, color, text, Icon, link }) => 
 
 export default Button;
 
-const ButtonWrapper: React.FC<{ link?: string }> = ({ link, children }) => {
-    return <>{link ? <a href={link}>{children}</a> : <>{children}</>}</>;
+const ButtonWrapper: React.FC<{ link?: string; className?: string }> = ({
+    link,
+    className,
+    children,
+}) => {
+    return (
+        <>
+            {link ? (
+                <a className={className} href={link}>
+                    {children}
+                </a>
+            ) : (
+                <>{children}</>
+            )}
+        </>
+    );
 };

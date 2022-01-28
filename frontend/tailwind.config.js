@@ -20,7 +20,10 @@ module.exports = {
                 extraLarge: '1.5rem',
             },
             lineHeight: {
-                base: '120%',
+                base: '1.05rem',
+                large: '1.2rem',
+                small: '0.9rem',
+                extraLarge: '1.8rem',
             },
             borderRadius: {
                 base: '1.25rem',

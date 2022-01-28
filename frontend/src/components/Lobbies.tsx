@@ -58,7 +58,7 @@ const lobbies: Lobby[] = [
             image: 'https://cdn.realsport101.com/images/ncavvykf/epicstream/1291d35e00f077741819c23a19e5043c0a54e8fc-864x382.png?rect=93,0,679,382&w=700&h=394&dpr=2',
             username: 'Nezuko',
         },
-        title: 'Such wow join join long title here!!!',
+        title: 'Such wow join join long title here!!! Such wow join join long title here!!! HELL',
         tags: ['idk', 'competitive'],
         players: {
             num: 5,
