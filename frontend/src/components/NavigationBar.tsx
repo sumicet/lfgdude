@@ -11,7 +11,7 @@ import { ReactComponent as People } from '../assets/images/people.svg';
 import { ReactComponent as Discord } from '../assets/images/discord.svg';
 import Chip from './Chip';
 import { Link } from 'react-router-dom';
-import { REACT_APP_DISCORD_LINK, REACT_APP_DISCORD_SERVER } from '../config.js';
+import { config } from '../config.js';
 import Button from './Button';
 import { memo } from 'react';
 
@@ -48,14 +48,14 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
                 <div className='flex items-center'>
                     {/* should be 'a' tag - external link */}
                     <a
-                        href={REACT_APP_DISCORD_SERVER}
+                        href={config.discordServer}
                         target='_blank'
                         className='mr-6'
                         rel='noreferrer'
                     >
                         <Chip text='Join Discord' Icon={Discord} />
                     </a>
-                    <Button text='Connect' link={REACT_APP_DISCORD_LINK} />
+                    <Button text='Connect' link={config.discordLink} />
                 </div>
             </div>
         </div>
