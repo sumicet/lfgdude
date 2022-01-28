@@ -10,8 +10,8 @@ const Grid: React.FC<GridProps> = ({ data, gap = 4, className = '' }) => {
     return (
         <div className={`flex flex-1 ${className}`}>
             {data.map((lobby: any, index: number) => (
-                <div className={`w-full h-fit ${gap === 4 ? 'mx-2' : 'mx-1'}`}>
-                    <Card key={`${index + 1}`} lobby={lobby} />
+                <div key={`${index + 1}`} className={`w-full h-fit ${gap === 4 ? 'mx-2' : 'mx-1'}`}>
+                    <Card lobby={lobby} />
                 </div>
             ))}
         </div>
