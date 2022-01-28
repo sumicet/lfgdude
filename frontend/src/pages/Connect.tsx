@@ -14,6 +14,18 @@ const Connect: React.FC<ConnectProps> = () => {
             return;
         }
 
+        const response = fetch('http://localhost:8000/api/discord_auth', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: JSON.stringify(code),
+        });
+
+        if (!response) {
+            console.log('Tommy fucked up pepeHands');
+        }
+
         console.log(code);
     }, [query]);
 
