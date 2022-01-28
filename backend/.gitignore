@@ -1,3 +1,2 @@
-password.txt
-discord_secret.txt
 __pycache__/
+.env

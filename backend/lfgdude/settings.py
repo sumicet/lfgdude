@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import os
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -41,6 +43,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -74,8 +77,7 @@ WSGI_APPLICATION = 'lfgdude.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-with open('password.txt') as f:
-    password = f.readline().strip()
+password = os.getenv('SQL_PASSWORD')
 
 DATABASES = {
     'default': {
@@ -129,3 +131,12 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Allow all origins if debugging
+# Also remove corsheaders as unnecessary if not debugging
+
+if DEBUG:
+    MIDDLEWARE.remove('django.middleware.csrf.CsrfViewMiddleware')
+    CORS_ALLOW_ALL_ORIGINS = True
+else:
+    MIDDLEWARE.remove('corsheaders.middleware.CorsMiddleware')
