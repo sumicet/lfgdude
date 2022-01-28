@@ -1,7 +1,7 @@
 import { memo } from 'react';
 
 interface TextProps {
-    color?: 'extra-light' | 'dark' | 'extra-dark';
+    color?: 'extra-light' | 'dark' | 'extra-dark' | 'accent';
     weight?: 'bold' | 'light';
     theme?: 'code' | 'neon';
     size?: 'extra-large' | 'large' | 'small';
@@ -19,6 +19,8 @@ const Text: React.FC<TextProps> = ({ color, weight, theme, size, className = '',
                     ? 'text-textDark'
                     : color === 'extra-dark'
                     ? 'text-textExtraDark'
+                    : color === 'accent'
+                    ? 'text-accent'
                     : 'text-textLight'
             } ${className} ${
                 size === 'extra-large'

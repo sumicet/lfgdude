@@ -18,9 +18,10 @@ const Card: React.FC<CardProps> = ({ lobby }) => {
                         gray={lobby.players.max - lobby.players.num}
                     />
                 </div>
-                <Text>
-                    {lobby.players.num}/{lobby.players.max}
+                <Text color='accent' weight='bold'>
+                    {lobby.players.num}
                 </Text>
+                <Text>/{lobby.players.max}</Text>
             </div>
         </div>
     );

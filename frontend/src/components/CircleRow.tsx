@@ -7,17 +7,19 @@ interface CircleRowProps {
 
 const CircleRow: React.FC<CircleRowProps> = ({ colored, gray }) => {
     return (
-        <div className='flex bg-fuchsia-600'>
-            {[...Array(colored)].map(() => (
-                <div className='mr-2'>
-                    <Circle color='accent' />
-                </div>
-            ))}
-            {[...Array(gray)].map(() => (
-                <div className='mr-2'>
-                    <Circle />
-                </div>
-            ))}
+        <div className='flex'>
+            {colored &&
+                [...Array(colored)].map((_: any, index: number) => (
+                    <div className={!gray ? '' : 'mr-2'}>
+                        <Circle color='accent' />
+                    </div>
+                ))}
+            {gray &&
+                [...Array(gray)].map((_: any, index: number) => (
+                    <div className={index === gray - 1 ? '' : 'mr-2'}>
+                        <Circle />
+                    </div>
+                ))}
         </div>
     );
 };
