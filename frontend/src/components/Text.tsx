@@ -3,7 +3,7 @@ import { memo } from 'react';
 interface TextProps {
     color?: 'extra-light' | 'dark' | 'extra-dark' | 'accent' | 'medium';
     weight?: 'bold' | 'light' | 'medium';
-    theme?: 'code' | 'neon';
+    theme?: 'code' | 'colored';
     size?: 'extra-large' | 'large' | 'small';
     className?: string;
     children: any;
@@ -47,7 +47,7 @@ const Text: React.FC<TextProps> = ({ color, weight, theme, size, className = '',
                     ? 'text-small'
                     : 'text-base'
             } ${theme === 'code' ? 'font-code' : 'font-text'} ${
-                theme === 'neon' && 'text-shadow-neon'
+                theme === 'colored' && 'gradient-text'
             } ${
                 weight === 'light'
                     ? 'font-light'

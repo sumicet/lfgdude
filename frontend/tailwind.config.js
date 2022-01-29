@@ -35,7 +35,7 @@ module.exports = {
                 light: '#1E1E21',
                 extraLight: '#34343F',
                 onDark: '#0D0D0D',
-                accent: '#7045de',
+                accent: 'rgb(194, 0, 116)',
                 textExtraLight: '#FFFFFF',
                 textLight: 'rgba(255, 255, 255, 0.8)',
                 textMedium: 'rgba(255, 255, 255, 0.6)',
