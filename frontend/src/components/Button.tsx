@@ -15,7 +15,7 @@ const Button: React.FC<ButtonProps> = ({ onClick, color, text, Icon, link, class
         <ButtonWrapper link={link} className={className}>
             <button
                 onClick={onClick}
-                className={`group flex h-fit w-fit py-2 px-4 rounded-base ease-in-out duration-200 relative before:absolute before:inset-0 before:rounded-base before:gradient before:!bg-[length:500%] before:blur-[10px] before:hover:opacity-70 before:animate-[gradient_20s_linear_infinite] before:z-0 before:opacity-0 before:transition-[opacity] before:duration-200 before:ease-in-out after:z-[1] after:absolute after:inset-0 after:rounded-base after:gradient after:!bg-[length:500%] after:animate-[gradient_20s_linear_infinite] after:opacity-0 after:hover:opacity-70 after:transition-[opacity] after:duration-200 after:ease-in-out ${
+                className={`group flex h-fit w-fit py-2 px-4 rounded-base ease-in-out duration-200 relative before:absolute before:inset-0 before:rounded-base before:gradient before:!bg-[length:500%] before:blur-[10px] before:hover:opacity-70 before:animate-[gradient_20s_linear_infinite] before:z-1 before:opacity-0 before:transition-[opacity] before:duration-200 before:ease-in-out after:z-[2] after:absolute after:inset-0 after:rounded-base after:gradient after:!bg-[length:500%] after:animate-[gradient_20s_linear_infinite] after:opacity-0 after:hover:opacity-70 after:transition-[opacity] after:duration-200 after:ease-in-out ${
                     color === 'light' ? 'hover:bg-extraLight' : ''
                 } ${
                     color === 'light'

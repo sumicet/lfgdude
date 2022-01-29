@@ -20,21 +20,17 @@ const Chip: React.FC<ChipProps> = ({
     return (
         <div
             className={`flex items-center ${margin && `m-[${margin}]`}  ${
-                !noHoverEffect && 'group hover:text-shadow-neon hover:transition-[text-shadow]'
+                !noHoverEffect && 'group'
             } ease-in-out duration-200 ${
                 color === 'extra-light' ? 'svg-extra-light' : 'svg-light'
             } ${className}`}
         >
-            <div
-                className={`mr-2 ${
-                    !noHoverEffect
-                        ? 'group-hover:neon hover:transition-[text-shadow]  ease-in-out duration-200'
-                        : ''
-                }`}
-            >
+            <div className={`mr-2 ${!noHoverEffect ? 'group-hover:svg-extra-light' : ''}`}>
                 <Icon className='h-[16px]' />
             </div>
-            <Text color={color}>{text}</Text>
+            <Text color={color} className='group-hover:text-textExtraLight'>
+                {text}
+            </Text>
         </div>
     );
 };

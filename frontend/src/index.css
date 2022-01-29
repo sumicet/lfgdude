@@ -57,6 +57,10 @@ code {
                 #5200ff 0px 0px 30px, #5200ff 0px 0px 40px;
         }
 
+        .svg-extra-dark * path {
+            fill: #0a0a0a;
+        }
+
         .svg-extra-light * path {
             fill: white;
         }
