@@ -28,7 +28,7 @@ const Chip: React.FC<ChipProps> = ({
             <div className={`mr-2 ${!noHoverEffect ? 'group-hover:svg-extra-light' : ''}`}>
                 <Icon className='h-[16px]' />
             </div>
-            <Text color={color} className='group-hover:text-textExtraLight'>
+            <Text color={color} className={!noHoverEffect ? 'group-hover:text-textExtraLight' : ''}>
                 {text}
             </Text>
         </div>
