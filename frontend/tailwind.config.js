@@ -3,11 +3,12 @@ module.exports = {
     theme: {
         extend: {
             screens: {
-                sm: '640px',
-                md: '768px',
-                lg: '1024px',
-                xl: '1280px',
-                '2xl': '1536px',
+                xs: '600px',
+                sm: '850px',
+                md: '1000px',
+                lg: '1250px',
+                xl: '1600px',
+                '2xl': '1800px',
             },
             fontFamily: {
                 text: ['Rubik', 'ui-sans-serif', 'system-ui', 'Segoe UI Symbol', 'Arial'],
@@ -48,6 +49,24 @@ module.exports = {
                 4: '1.25rem', // 20px
                 5: '1.875rem', // 30px
                 6: '2.5rem', // 40px
+            },
+            keyframes: {
+                gradient: {
+                    '0%': {
+                        'background-position': '0%',
+                    },
+                    '100%': {
+                        'background-position': '500%',
+                    },
+                },
+                shake: {
+                    '0%': { transform: 'rotate(0deg) scale(1)' },
+                    '2.5%': { transform: 'rotate(-20deg) scale(1.1)' },
+                    '5%': { transform: 'rotate(-0deg)' },
+                    '7.5%': { transform: 'rotate(20deg) scale(1)' },
+                    '10%': { transform: 'rotate(0deg)' },
+                    '100%': { transform: 'rotate(0deg)' },
+                },
             },
         },
     },

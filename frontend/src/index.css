@@ -73,5 +73,23 @@ code {
         input {
             outline: 0px;
         }
+
+        .text-on-2-rows {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .gradient {
+            background: linear-gradient(
+                90deg,
+                rgb(28, 160, 217),
+                rgb(63, 38, 191),
+                rgb(194, 0, 116),
+                rgb(63, 38, 191),
+                rgb(28, 160, 217)
+            );
+        }
     }
 }

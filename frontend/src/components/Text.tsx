@@ -7,7 +7,6 @@ interface TextProps {
     size?: 'extra-large' | 'large' | 'small';
     className?: string;
     children: any;
-    rows?: number;
 }
 
 // text-overflow: ellipsis;
@@ -16,15 +15,7 @@ interface TextProps {
 //   max-height: 3.6em;
 //   line-height: 1.8em;
 
-const Text: React.FC<TextProps> = ({
-    color,
-    weight,
-    theme,
-    size,
-    className = '',
-    rows,
-    children,
-}) => {
+const Text: React.FC<TextProps> = ({ color, weight, theme, size, className = '', children }) => {
     return (
         <p
             className={`${

@@ -1,3 +1,4 @@
+import Row from './Row';
 import Text from './Text';
 
 interface TagsRowProps {
@@ -7,7 +8,7 @@ interface TagsRowProps {
 
 const TagsRow: React.FC<TagsRowProps> = ({ data, className }) => {
     return (
-        <div className={`flex ${className}`}>
+        <Row className={`h-[0.9rem] ${className}`}>
             {data.map((hashtag: string, index: number) => (
                 <Text
                     key={hashtag}
@@ -19,7 +20,7 @@ const TagsRow: React.FC<TagsRowProps> = ({ data, className }) => {
                     #{hashtag}
                 </Text>
             ))}
-        </div>
+        </Row>
     );
 };
 
