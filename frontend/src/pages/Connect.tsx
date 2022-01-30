@@ -8,7 +8,7 @@ const Connect: React.FC<ConnectProps> = () => {
     const query = useQuery();
 
     const sendCode = async (code: string) => {
-        const response = await fetch('http://localhost:9000/lfgdude/api/discord_auth', {
+        const response = await fetch('http://lfgdude.ddnsfree.com/lfgdude/api/discord_auth', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
