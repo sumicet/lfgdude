@@ -19,14 +19,14 @@ interface NavigationBarProps {}
 
 const NavigationBar: React.FC<NavigationBarProps> = () => {
     return (
-        <div className='flex justify-center bg-medium text-white border-b border-light'>
+        <div className='flex justify-center bg-medium text-white border-b border-light z-[1]'>
             <div className='flex flex-row flex-1 max-w-[1440px] px-3 py-4'>
                 <div className='flex flex-1 items-center'>
                     <div className='flex items-center mr-6'>
-                        <Text size='extra-large' weight='light' theme='neon'>
-                            LFG Dude
+                        <Text size='extra-large' weight='bold' theme='colored'>
+                            {config.appName}
                         </Text>
-                        <Logo />
+                        {/* <Logo /> */}
                     </div>
 
                     {[

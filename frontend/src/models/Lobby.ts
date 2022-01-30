@@ -3,7 +3,6 @@ export interface Lobby {
     game: {
         id: string;
         name: string;
-        image: string;
     };
     leader: {
         id: string;

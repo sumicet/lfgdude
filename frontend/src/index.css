@@ -57,6 +57,10 @@ code {
                 #5200ff 0px 0px 30px, #5200ff 0px 0px 40px;
         }
 
+        .svg-extra-dark * path {
+            fill: #0a0a0a;
+        }
+
         .svg-extra-light * path {
             fill: white;
         }
@@ -72,6 +76,39 @@ code {
 
         input {
             outline: 0px;
+        }
+
+        .text-on-2-rows {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .gradient {
+            background: linear-gradient(
+                90deg,
+                rgb(28, 160, 217),
+                rgb(63, 38, 191),
+                rgb(194, 0, 116),
+                rgb(63, 38, 191),
+                rgb(28, 160, 217)
+            );
+        }
+
+        .gradient-text {
+            background-color: #f3ec78;
+            background-image: linear-gradient(
+                90deg,
+                rgb(194, 0, 116),
+                rgb(63, 38, 191),
+                rgb(28, 160, 217)
+            );
+            background-size: 500%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
         }
     }
 }

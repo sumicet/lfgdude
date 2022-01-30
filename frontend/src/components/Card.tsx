@@ -44,15 +44,15 @@ const Card: React.FC<CardProps> = ({ lobby }) => {
                     <Text color='medium'>{lobby.leader.username}</Text>
                 </div>
             </div>
-            <Text className={`mt-2 h-[2.4rem]`} size='large' rows={2}>
+            <Text className={`mt-2 h-[2.4rem] text-on-2-rows`} size='large'>
                 {lobby.title}
             </Text>
 
             <div className='flex flex-1 mt-4'>
-                <div className='flex flex-1 items-center'>
+                <div className='flex flex-1 items-center mr-4'>
                     <TagsRow data={lobby.tags} />
                 </div>
-                <Button text='Join' Icon={HeadsetWithMic} />
+                <Button text='Join' color='extra-light' Icon={HeadsetWithMic} />
             </div>
         </div>
     );

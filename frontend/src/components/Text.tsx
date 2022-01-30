@@ -3,11 +3,10 @@ import { memo } from 'react';
 interface TextProps {
     color?: 'extra-light' | 'dark' | 'extra-dark' | 'accent' | 'medium';
     weight?: 'bold' | 'light' | 'medium';
-    theme?: 'code' | 'neon';
+    theme?: 'code' | 'colored';
     size?: 'extra-large' | 'large' | 'small';
     className?: string;
     children: any;
-    rows?: number;
 }
 
 // text-overflow: ellipsis;
@@ -16,15 +15,7 @@ interface TextProps {
 //   max-height: 3.6em;
 //   line-height: 1.8em;
 
-const Text: React.FC<TextProps> = ({
-    color,
-    weight,
-    theme,
-    size,
-    className = '',
-    rows,
-    children,
-}) => {
+const Text: React.FC<TextProps> = ({ color, weight, theme, size, className = '', children }) => {
     return (
         <p
             className={`${
@@ -56,7 +47,7 @@ const Text: React.FC<TextProps> = ({
                     ? 'text-small'
                     : 'text-base'
             } ${theme === 'code' ? 'font-code' : 'font-text'} ${
-                theme === 'neon' && 'text-shadow-neon'
+                theme === 'colored' && 'gradient-text'
             } ${
                 weight === 'light'
                     ? 'font-light'
