@@ -85,7 +85,7 @@ DATABASES = {
         'NAME': 'djangodb',
         'USER': 'postgres',
         'PASSWORD': password,
-        'HOST': 'localhost',
+        'HOST': '192.168.0.110',
         'PORT': '5432',
     }
 }
