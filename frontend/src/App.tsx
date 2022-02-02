@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import Container from './components/layout/Container';
+import LobbyModal from './components/LobbyModal';
 import NavigationBar from './components/NavigationBar';
 import About from './pages/About';
 import Connect from './pages/Connect';
@@ -8,7 +9,7 @@ import Home from './pages/Home';
 
 function App() {
     return (
-        <div className='flex flex-1 flex-col bg-dark'>
+        <div className='flex flex-col w-[100vw] min-w-full overflow-y-scroll overflow-x-hidden bg-dark relative'>
             <NavigationBar />
 
             <Container>
@@ -19,6 +20,8 @@ function App() {
                     <Route path='/connect' element={<Connect />} />
                 </Routes>
             </Container>
+
+            <LobbyModal />
         </div>
     );
 }

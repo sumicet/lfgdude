@@ -1,7 +1,5 @@
 import Text from './Text';
 // @ts-ignore
-import { ReactComponent as Logo } from '../assets/images/logo.svg';
-// @ts-ignore
 import { ReactComponent as Headset } from '../assets/images/headset.svg';
 // @ts-ignore
 import { ReactComponent as Question } from '../assets/images/question.svg';
@@ -26,7 +24,6 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
                         <Text size='extra-large' weight='bold' theme='colored'>
                             {config.appName}
                         </Text>
-                        {/* <Logo /> */}
                     </div>
 
                     {[

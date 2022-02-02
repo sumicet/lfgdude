@@ -1,29 +1,17 @@
 import { useState } from 'react';
-import Modal from 'react-modal';
+import { AnimatePresence } from 'framer-motion';
 
 interface LobbyModalProps {}
 
 const LobbyModal: React.FC<LobbyModalProps> = () => {
     const [isOpen, setIsOpen] = useState(true);
+    return <></>;
 
-    return (
-        <Modal
-            isOpen={isOpen}
-            className='z-10 flex'
-            style={{
-                content: {
-                    background: 'purple',
-                    position: 'absolute',
-                    bottom: 0,
-                    right: 0,
-                    left: 0,
-                },
-                overlay: { background: 'transparent' },
-            }}
-        >
-            hello
-        </Modal>
-    );
+    // return (
+    //     <div className='flex absolute z-10 bottom-0 w-full max-w-[1400px] translate-x-[-50%] left-[50%] h-fit bg-red-600'>
+    //         <div className='w-[300px] h-[300px]'>hi</div>
+    //     </div>
+    // );
 };
 
 export default LobbyModal;
