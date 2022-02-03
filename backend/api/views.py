@@ -62,14 +62,17 @@ def get_lobbies(request: HttpRequest):
     if request.method != "GET":
         raise PermissionDenied
 
-    game_id = -1
+    requested_game = None
     if 'game_id' in request.GET:
         try:
             game_id = int(request.GET['game_id'])
+            requested_game = Game.objects.get(id=game_id)
         except ValueError as e:
             raise SuspiciousOperation
+        except Game.DoesNotExist:
+            return HttpResponse("Requested game does not exist")
 
-    lobbies = Lobby.objects.all() if game_id == -1 else Lobby.objects.filter(id=game_id)
+    lobbies = Lobby.objects.all() if requested_game is None else Lobby.objects.filter(game=requested_game)
     data = [
         {
             'id': x.id,

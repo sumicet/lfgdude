@@ -16,7 +16,7 @@ class User(models.Model):
     username = models.CharField(max_length=32)
     discriminator = models.IntegerField()
     avatar_hash = models.CharField(max_length=32)
-    banner_hash = models.CharField(max_length=32)
+    banner_hash = models.CharField(max_length=32, blank=True)
     banner_color = models.CharField(max_length=8)
     accent_color = models.IntegerField()
 
