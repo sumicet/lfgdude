@@ -12,6 +12,9 @@ from .users import add_user
 DISCORD_TOKEN_URL = os.getenv('DISCORD_TOKEN_URL')
 DISCORD_REDIRECT_URI = os.getenv('DISCORD_REDIRECT_URI')
 
+def index(request):
+    return HttpResponse("This is LFGDude backend API")
+    
 
 def discord_auth(request: HttpRequest):
     if request.method != 'POST':
