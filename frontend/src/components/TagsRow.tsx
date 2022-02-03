@@ -6,7 +6,7 @@ interface TagsRowProps {
     className?: string;
 }
 
-const TagsRow: React.FC<TagsRowProps> = ({ data, className }) => {
+const TagsRow = ({ data, className }: TagsRowProps) => {
     return (
         <Row className={`h-[0.9rem] ${className}`}>
             {data.map((hashtag: string, index: number) => (

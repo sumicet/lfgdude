@@ -1,6 +1,4 @@
-interface AboutProps {}
-
-const About: React.FC<AboutProps> = () => {
+const About = () => {
     return <div className='flex'>wan wan about</div>;
 };
 

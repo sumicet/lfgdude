@@ -2,9 +2,7 @@ import { useEffect } from 'react';
 import Text from '../components/Text';
 import { useQuery } from '../hooks/useQuery';
 
-interface ConnectProps {}
-
-const Connect: React.FC<ConnectProps> = () => {
+const Connect = () => {
     const query = useQuery();
 
     const sendCode = async (code: string) => {
@@ -13,7 +11,7 @@ const Connect: React.FC<ConnectProps> = () => {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
-            body: JSON.stringify('code='.concat(code))
+            body: JSON.stringify('code='.concat(code)),
         });
 
         if (!response) {

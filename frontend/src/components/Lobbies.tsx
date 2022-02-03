@@ -12,6 +12,7 @@ interface LobbiesProps {
 
 const lobbies: Lobby[] = [
     {
+        id: '1',
         game: {
             id: '1',
             name: 'Among Us',
@@ -24,11 +25,28 @@ const lobbies: Lobby[] = [
         title: 'wow amazing title',
         tags: ['chill', 'easy', 'competitive', '4th tag'],
         players: {
-            num: 4,
             max: 10,
+            list: [
+                {
+                    id: '1',
+                    username: 'IDK',
+                    image: 'https://static.cinemagia.ro/img/db/movie/12/38/471/the-witcher-966569l.jpg',
+                },
+                {
+                    id: '2',
+                    username: 'IDK2',
+                    image: 'https://static.cinemagia.ro/img/db/movie/12/38/471/the-witcher-966569l.jpg',
+                },
+                {
+                    id: '3',
+                    username: 'UHHHHH',
+                    image: 'https://static.cinemagia.ro/img/db/movie/12/38/471/the-witcher-966569l.jpg',
+                },
+            ],
         },
     },
     {
+        id: '2',
         game: {
             id: '1',
             name: 'Among Us',
@@ -41,11 +59,23 @@ const lobbies: Lobby[] = [
         title: 'Such wow join join long title here!!!',
         tags: ['idk', 'competitive'],
         players: {
-            num: 5,
             max: 6,
+            list: [
+                {
+                    id: '4',
+                    username: 'mockdata',
+                    image: 'https://static.cinemagia.ro/img/db/movie/12/38/471/the-witcher-966569l.jpg',
+                },
+                {
+                    id: '5',
+                    username: 'toolazyforthis',
+                    image: 'https://static.cinemagia.ro/img/db/movie/12/38/471/the-witcher-966569l.jpg',
+                },
+            ],
         },
     },
     {
+        id: '3',
         game: {
             id: '1',
             name: 'Among Us',
@@ -58,11 +88,23 @@ const lobbies: Lobby[] = [
         title: 'Such wow join join long title here!!! Such wow join join long title here!!! join long title here!!! join long title here!!!',
         tags: ['idk', 'competitive'],
         players: {
-            num: 5,
             max: 6,
+            list: [
+                {
+                    id: '6',
+                    username: 'whatsagoodname',
+                    image: 'https://i.pinimg.com/736x/d3/32/83/d3328396ae00e51946c1300216abbc42.jpg',
+                },
+                {
+                    id: '7',
+                    username: 'jasmine',
+                    image: 'https://static.cinemagia.ro/img/db/movie/12/38/471/the-witcher-966569l.jpg',
+                },
+            ],
         },
     },
     {
+        id: '4',
         game: {
             id: '1',
             name: 'Overwatch',
@@ -75,13 +117,34 @@ const lobbies: Lobby[] = [
         title: 'Such wow join join long title here!!! Such wow join join long title here!!! join long title here!!!',
         tags: ['competitive'],
         players: {
-            num: 10,
             max: 20,
+            list: [
+                {
+                    id: '8',
+                    username: 'notreally',
+                    image: 'https://i.pinimg.com/736x/d3/32/83/d3328396ae00e51946c1300216abbc42.jpg',
+                },
+                {
+                    id: '9',
+                    username: 'hehe',
+                    image: 'https://static.cinemagia.ro/img/db/movie/12/38/471/the-witcher-966569l.jpg',
+                },
+                {
+                    id: '10',
+                    username: 'lotsofplayers',
+                    image: 'https://i.pinimg.com/736x/d3/32/83/d3328396ae00e51946c1300216abbc42.jpg',
+                },
+                {
+                    id: '11',
+                    username: 'ranoutofideas',
+                    image: 'https://static.cinemagia.ro/img/db/movie/12/38/471/the-witcher-966569l.jpg',
+                },
+            ],
         },
     },
 ];
 
-const Lobbies: React.FC<LobbiesProps> = ({ className }) => {
+const Lobbies = ({ className }: LobbiesProps) => {
     return (
         <div
             className={`flex bg-medium flex-1 flex-col rounded-base border border-light p-4 ${className}`}

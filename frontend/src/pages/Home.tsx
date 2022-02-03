@@ -1,9 +1,7 @@
 import Lobbies from '../components/Lobbies';
 import SearchBar from '../components/SearchBar';
 
-interface HomeProps {}
-
-const Home: React.FC<HomeProps> = () => {
+const Home = () => {
     return (
         <div className='flex flex-1 flex-col'>
             <SearchBar />

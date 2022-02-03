@@ -6,7 +6,7 @@ interface InputProps {
     className?: string;
 }
 
-const Input: React.FC<InputProps> = ({ theme, placeholder, className }) => {
+const Input = ({ theme, placeholder, className }: InputProps) => {
     const [input, setInput] = useState<string>();
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {

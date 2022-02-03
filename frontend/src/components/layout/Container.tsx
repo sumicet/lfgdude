@@ -6,7 +6,7 @@ interface ContainerProps {
     children: ReactElement;
 }
 
-const Container: React.FC<ContainerProps> = ({ children }) => {
+const Container = ({ children }: ContainerProps) => {
     return (
         <div className='flex flex-1 justify-center text-white mt-4'>
             <div className='absolute right-0 top-[50%] translate-y-[-50%] svg-extra-dark'>

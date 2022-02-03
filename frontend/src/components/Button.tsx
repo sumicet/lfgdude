@@ -10,7 +10,7 @@ interface ButtonProps {
     className?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ onClick, color, text, Icon, link, className }) => {
+const Button = ({ onClick, color, text, Icon, link, className = '' }: ButtonProps) => {
     return (
         <ButtonWrapper link={link} className={className}>
             <button
@@ -45,10 +45,14 @@ const Button: React.FC<ButtonProps> = ({ onClick, color, text, Icon, link, class
 
 export default Button;
 
-const ButtonWrapper: React.FC<{ link?: string; className?: string }> = ({
+const ButtonWrapper = ({
     link,
     className,
     children,
+}: {
+    link?: string;
+    className?: string;
+    children: any;
 }) => {
     return (
         <>

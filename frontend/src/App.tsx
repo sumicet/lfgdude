@@ -9,7 +9,7 @@ import Home from './pages/Home';
 
 function App() {
     return (
-        <div className='flex flex-col w-[100vw] min-w-full overflow-y-scroll overflow-x-hidden bg-dark relative'>
+        <div className='flex flex-col w-[100vw] min-h-full min-w-full overflow-y-scroll overflow-x-hidden bg-dark relative'>
             <NavigationBar />
 
             <Container>
