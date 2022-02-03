@@ -1,34 +1,46 @@
-import Text from './Text';
+import Text, { TextProps } from './Text';
 
 interface ChipProps {
     Icon: any;
     text: string;
     margin?: string;
-    color?: 'extra-light';
+    color?: 'extra-light' | 'medium';
     className?: string;
+    textProps?: TextProps;
     noHoverEffect?: boolean;
 }
 
-const Chip: React.FC<ChipProps> = ({
+const Chip = ({
     Icon,
     text,
     margin,
     color,
     className = '',
+    textProps,
     noHoverEffect = false,
-}) => {
+}: ChipProps) => {
     return (
         <div
-            className={`flex items-center ${margin && `m-[${margin}]`}  ${
+            className={`flex items-center cursor-pointer ${margin && `m-[${margin}]`}  ${
                 !noHoverEffect && 'group'
             } ease-in-out duration-200 ${
-                color === 'extra-light' ? 'svg-extra-light' : 'svg-light'
+                color === 'extra-light'
+                    ? 'svg-extra-light'
+                    : color === 'medium'
+                    ? 'svg-medium'
+                    : 'svg-light'
             } ${className}`}
         >
             <div className={`mr-2 ${!noHoverEffect ? 'group-hover:svg-extra-light' : ''}`}>
                 <Icon className='h-[16px]' />
             </div>
-            <Text color={color} className={!noHoverEffect ? 'group-hover:text-textExtraLight' : ''}>
+            <Text
+                {...textProps}
+                color={color}
+                className={`${!noHoverEffect ? 'group-hover:text-textExtraLight' : ''} ${
+                    textProps?.className || ''
+                }`}
+            >
                 {text}
             </Text>
         </div>

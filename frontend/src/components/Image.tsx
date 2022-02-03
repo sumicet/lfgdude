@@ -7,7 +7,7 @@ interface ImageProps {
 }
 
 // TODO load image properly
-const Image: React.FC<ImageProps> = ({ src, alt, className }) => {
+const Image = ({ src, alt, className }: ImageProps) => {
     return <img src={src} alt={alt} className={`w-full h-full object-cover ${className}`} />;
 };
 

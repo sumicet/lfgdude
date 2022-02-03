@@ -1,17 +1,17 @@
+import { User } from './User';
+
 export interface Lobby {
+    id: string;
     title: string;
     game: {
         id: string;
         name: string;
+        code?: string; // in-game lobby code
     };
-    leader: {
-        id: string;
-        username: string;
-        image: string;
-    };
+    leader: User;
     tags: string[];
     players: {
-        num: number;
         max: number;
+        list: User[];
     };
 }

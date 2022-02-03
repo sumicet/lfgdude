@@ -1,8 +1,6 @@
 import { memo } from 'react';
 
-interface SeparatorProps {}
-
-const Separator: React.FC<SeparatorProps> = () => {
+const Separator = () => {
     return <div className='flex flex-1 max-w-[1px] bg-light' />;
 };
 

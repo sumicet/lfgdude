@@ -1,12 +1,12 @@
 import { memo } from 'react';
 
-interface TextProps {
+export interface TextProps {
     color?: 'extra-light' | 'dark' | 'extra-dark' | 'accent' | 'medium';
     weight?: 'bold' | 'light' | 'medium';
     theme?: 'code' | 'colored';
     size?: 'extra-large' | 'large' | 'small';
     className?: string;
-    children: any;
+    children?: any;
 }
 
 // text-overflow: ellipsis;
@@ -15,7 +15,7 @@ interface TextProps {
 //   max-height: 3.6em;
 //   line-height: 1.8em;
 
-const Text: React.FC<TextProps> = ({ color, weight, theme, size, className = '', children }) => {
+const Text = ({ color, weight, theme, size, className = '', children }: TextProps) => {
     return (
         <p
             className={`${
@@ -26,7 +26,7 @@ const Text: React.FC<TextProps> = ({ color, weight, theme, size, className = '',
                     : size === 'small'
                     ? 'leading-small'
                     : 'leading-base'
-            } align-middle flex items-center ${
+            } align-middle ${
                 color === 'extra-light'
                     ? 'text-textExtraLight'
                     : color === 'medium'
@@ -47,7 +47,7 @@ const Text: React.FC<TextProps> = ({ color, weight, theme, size, className = '',
                     ? 'text-small'
                     : 'text-base'
             } ${theme === 'code' ? 'font-code' : 'font-text'} ${
-                theme === 'colored' && 'gradient-text'
+                theme === 'colored' ? 'gradient-text' : ''
             } ${
                 weight === 'light'
                     ? 'font-light'

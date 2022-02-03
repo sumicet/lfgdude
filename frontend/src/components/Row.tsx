@@ -7,7 +7,7 @@ interface RowProps {
  *
  * @className height required if you only want a certain number of rows
  */
-const Row: React.FC<RowProps> = ({ className, children }) => {
+const Row = ({ className, children }: RowProps) => {
     return <div className={`flex flex-wrap w-full overflow-hidden ${className}`}>{children}</div>;
 };
 

@@ -1,6 +1,4 @@
-interface FAQProps {}
-
-const FAQ: React.FC<FAQProps> = () => {
+const FAQ = () => {
     return <div className='flex'>wan wan FAQ</div>;
 };
 

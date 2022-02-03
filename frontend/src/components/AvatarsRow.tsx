@@ -1,23 +1,26 @@
+import { User } from '../models/User';
 import Image from './Image';
 import Row from './Row';
 
 interface AvatarsRowProps {
-    filled: number;
-    empty: number;
+    players: {
+        max: number;
+        list: User[];
+    };
 }
 
-const AvatarsRow: React.FC<AvatarsRowProps> = ({ filled, empty }) => {
+const AvatarsRow = ({ players }: AvatarsRowProps) => {
+    const { max, list } = players;
+    const empty = max - list.length;
+
     return (
         <div className='flex flex-1 flex-row'>
             <Row className='h-4'>
-                {filled &&
-                    [...Array(filled)].map((_: any, index: number) => (
-                        <div key={`${index + 1}`} className={`w-fit ${!empty ? '' : 'mr-2'}`}>
+                {list.length &&
+                    list.map((user: User) => (
+                        <div key={user.id} className={`w-fit ${!empty ? '' : 'mr-2'}`}>
                             <div className='w-4 h-4 rounded-[100%] overflow-hidden'>
-                                <Image
-                                    src='https://static.cinemagia.ro/img/db/movie/12/38/471/the-witcher-966569l.jpg'
-                                    alt=''
-                                />
+                                <Image src={user.image} alt='avatar' />
                             </div>
                         </div>
                     ))}

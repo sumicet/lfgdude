@@ -1,4 +1,4 @@
-import Card from './Card';
+import Card from './LobbyCard';
 import { Container, Row, Col, setConfiguration } from 'react-grid-system';
 
 interface GridProps {
@@ -7,7 +7,7 @@ interface GridProps {
     className?: string;
 }
 
-const Grid: React.FC<GridProps> = ({ data, gap = 4, className }) => {
+const Grid = ({ data, gap = 4, className }: GridProps) => {
     setConfiguration({ breakpoints: [600, 850, 1000, 1250, 1600], gridColumns: 6 });
 
     return (

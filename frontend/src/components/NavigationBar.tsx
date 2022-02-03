@@ -1,7 +1,5 @@
 import Text from './Text';
 // @ts-ignore
-import { ReactComponent as Logo } from '../assets/images/logo.svg';
-// @ts-ignore
 import { ReactComponent as Headset } from '../assets/images/headset.svg';
 // @ts-ignore
 import { ReactComponent as Question } from '../assets/images/question.svg';
@@ -15,9 +13,7 @@ import { config } from '../config.js';
 import Button from './Button';
 import { memo } from 'react';
 
-interface NavigationBarProps {}
-
-const NavigationBar: React.FC<NavigationBarProps> = () => {
+const NavigationBar = () => {
     return (
         <div className='flex justify-center bg-medium text-white border-b border-light z-[1]'>
             <div className='flex flex-row flex-1 max-w-[1440px] px-3 py-4'>
@@ -26,7 +22,6 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
                         <Text size='extra-large' weight='bold' theme='colored'>
                             {config.appName}
                         </Text>
-                        {/* <Logo /> */}
                     </div>
 
                     {[
