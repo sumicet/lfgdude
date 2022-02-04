@@ -1,5 +1,5 @@
 import Row from './Row';
-import Text from './Text';
+import Text from '../common/Text';
 
 interface TagsRowProps {
     data: string[];

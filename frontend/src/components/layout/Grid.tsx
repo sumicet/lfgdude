@@ -1,4 +1,4 @@
-import Card from './LobbyCard';
+import Card from '../LobbyCard';
 import { Container, Row, Col, setConfiguration } from 'react-grid-system';
 
 interface GridProps {

@@ -1,25 +1,27 @@
-import Chip from './Chip';
+import { ElementType } from 'react';
+import Chip from '../Chip';
 import Link from './Link';
 import Text from './Text';
 
 interface ButtonProps {
     text: string;
-    Icon?: any;
+    Icon?: ElementType;
     onClick?: () => void;
     color?: 'light' | 'medium';
     to?: string;
     className?: string;
+    containerClassName?: string;
 }
 
-const Button = ({ to, className = '', ...props }: ButtonProps) => {
+const Button = ({ to, containerClassName = '', ...props }: ButtonProps) => {
     return (
         <>
             {to ? (
-                <Link to={to} className={className}>
+                <Link to={to} className={containerClassName}>
                     <ButtonContent {...props} />
                 </Link>
             ) : (
-                <ButtonContent to={to} className={className} {...props} />
+                <ButtonContent to={to} {...props} />
             )}
         </>
     );

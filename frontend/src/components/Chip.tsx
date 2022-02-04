@@ -1,7 +1,8 @@
-import Text, { TextProps } from './Text';
+import { ElementType } from 'react';
+import Text, { TextProps } from './common/Text';
 
 interface ChipProps {
-    Icon: any;
+    Icon: ElementType;
     text: string;
     margin?: string;
     color?: 'medium' | 'dark' | 'light';

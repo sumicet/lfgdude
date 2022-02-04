@@ -1,7 +1,7 @@
 import { memo, useMemo } from 'react';
-import Text from '../components/Text';
+import Text from '../components/common/Text';
 import { ERROR } from '../constants/messages';
-import { ErrorCode } from '../redux/apis/main/types';
+import { ErrorCode } from '../models/Error';
 
 interface ErrorProps {
     code: ErrorCode;

@@ -6,7 +6,7 @@ interface LinkProps {
     children: any;
 }
 
-const Link = ({ to, className, children }: LinkProps) => {
+const Link = ({ to, className = '', children }: LinkProps) => {
     return (
         <>
             {to.includes('https://') ? (

@@ -1,4 +1,4 @@
-import Text from './Text';
+import Text from './common/Text';
 // @ts-ignore
 import { ReactComponent as Headset } from '../assets/images/headset.svg';
 // @ts-ignore
@@ -9,9 +9,9 @@ import { ReactComponent as People } from '../assets/images/people.svg';
 import { ReactComponent as Discord } from '../assets/images/discord.svg';
 import Chip from './Chip';
 import { config } from '../config.js';
-import Button from './Button';
+import Button from './common/Button';
 import { memo } from 'react';
-import Link from './Link';
+import Link from './common/Link';
 
 const Header = () => {
     return (

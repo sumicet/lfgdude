@@ -1,7 +1,7 @@
 import { memo } from 'react';
-import Input from './Input';
+import Input from './common/Input';
 import Separator from './layout/Separator';
-import Text from './Text';
+import Text from './common/Text';
 
 const SearchBar = () => {
     return (

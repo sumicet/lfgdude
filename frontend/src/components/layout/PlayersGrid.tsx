@@ -1,9 +1,9 @@
-import Image from './Image';
+import Image from '../common/Image';
 import Row from './Row';
-import Text from './Text';
+import Text from '../common/Text';
 // @ts-ignore
-import { ReactComponent as Plus } from '../assets/images/plus.svg';
-import { User } from '../models/User';
+import { ReactComponent as Plus } from '../../assets/images/plus.svg';
+import { User } from '../../models/User';
 
 interface PlayersGridProps {
     max: number;

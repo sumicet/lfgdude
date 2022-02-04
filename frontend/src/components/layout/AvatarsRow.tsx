@@ -1,5 +1,5 @@
-import { User } from '../models/User';
-import Image from './Image';
+import { User } from '../../models/User';
+import Image from '../common/Image';
 import Row from './Row';
 
 interface AvatarsRowProps {

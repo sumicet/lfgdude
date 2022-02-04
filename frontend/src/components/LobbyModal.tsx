@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import Text from './Text';
-import TagsRow from './TagsRow';
+import Text from './common/Text';
+import TagsRow from './layout/TagsRow';
 import Chip from './Chip';
 // @ts-ignore
 import { ReactComponent as CopyToClipboard } from '../assets/images/copy-to-clipboard.svg';
@@ -12,8 +12,8 @@ import { ReactComponent as Fullscreen } from '../assets/images/fullscreen.svg';
 // @ts-ignore
 import { ReactComponent as ArrowDown } from '../assets/images/arrow-down.svg';
 
-import Button from './Button';
-import PlayersGrid from './PlayersGrid';
+import Button from './common/Button';
+import PlayersGrid from './layout/PlayersGrid';
 import { useAppSelector } from '../redux/hooks';
 import { useDispatch } from 'react-redux';
 import { setActive } from '../redux/slices/lobbyModalSlice';
@@ -70,7 +70,7 @@ const LobbyModal = () => {
                                     className:
                                         'overflow-hidden text-ellipsis whitespace-nowrap max-w-full',
                                 }}
-                                Icon={() => <CopyToClipboard />}
+                                Icon={CopyToClipboard}
                                 color='dark'
                                 className='mt-4'
                             />
@@ -83,7 +83,7 @@ const LobbyModal = () => {
                                 </Text>
                                 <Button
                                     text='Join VC'
-                                    Icon={() => <Mic />}
+                                    Icon={Mic}
                                     color='light'
                                     to={lobby.vc.invite}
                                 />
@@ -106,6 +106,7 @@ const LobbyModal = () => {
                                 text='Get The F*ck Out'
                                 color='light'
                                 className='w-full'
+                                containerClassName='w-full bg-red-900'
                                 onClick={handleLeaveClick}
                             />
                         </div>

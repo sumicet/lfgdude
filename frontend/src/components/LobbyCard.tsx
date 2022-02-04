@@ -1,10 +1,10 @@
 import { memo } from 'react';
 import { Lobby } from '../models/Lobby';
-import AvatarsRow from './AvatarsRow';
-import Button from './Button';
-import Image from './Image';
-import TagsRow from './TagsRow';
-import Text from './Text';
+import AvatarsRow from './layout/AvatarsRow';
+import Button from './common/Button';
+import Image from './common/Image';
+import TagsRow from './layout/TagsRow';
+import Text from './common/Text';
 // @ts-ignore
 import { ReactComponent as HeadsetWithMic } from '../assets/images/headset-with-mic.svg';
 import { useDispatch } from 'react-redux';

@@ -1,10 +1,10 @@
 import { memo, useEffect } from 'react';
-import Button from './Button';
-import Text from './Text';
+import Button from './common/Button';
+import Text from './common/Text';
 // @ts-ignore
-import { ReactComponent as plus } from '../assets/images/plus.svg';
+import { ReactComponent as Plus } from '../assets/images/plus.svg';
 import { Lobby } from '../models/Lobby';
-import Grid from './Grid';
+import Grid from './layout/Grid';
 import { useGetLobbiesQuery } from '../redux/apis/main/lobby/lobbyApi';
 import { useNavigate } from 'react-router-dom';
 
@@ -164,7 +164,7 @@ const Lobbies = ({ className }: LobbiesProps) => {
         if (isError) {
             navigate('/404');
         }
-    }, [isError]);
+    }, [isError, navigate]);
 
     return (
         <div
@@ -176,7 +176,7 @@ const Lobbies = ({ className }: LobbiesProps) => {
                     <Text color='extra-dark' className='mr-4'>
                         Can’t find what you’re looking for? Create your own lobby!
                     </Text>
-                    <Button text='New' Icon={plus} color='medium' />
+                    <Button text='New' Icon={Plus} color='medium' />
                 </div>
             </div>
             <Grid data={lobbies} className='mt-4' />
