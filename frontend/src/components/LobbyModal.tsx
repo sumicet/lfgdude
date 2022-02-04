@@ -106,7 +106,6 @@ const LobbyModal = () => {
                                 text='Get The F*ck Out'
                                 color='light'
                                 className='w-full'
-                                containerClassName='w-full bg-red-900'
                                 onClick={handleLeaveClick}
                             />
                         </div>

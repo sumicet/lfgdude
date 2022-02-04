@@ -33,7 +33,7 @@ const ButtonContent = ({ onClick, color, text, Icon, to, className = '' }: Butto
     return (
         <button
             onClick={onClick}
-            className={`group flex justify-center h-fit w-fit py-2 px-4 rounded-base ease-in-out duration-200 relative ${
+            className={`group flex justify-center h-fit py-2 px-4 rounded-base ease-in-out duration-200 relative ${
                 color === 'medium'
                     ? 'hover:bg-extraLight'
                     : color === 'light'
