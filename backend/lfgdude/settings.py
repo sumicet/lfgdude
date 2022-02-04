@@ -31,7 +31,9 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if os.getenv("DEBUG") == "TRUE" else False
 
-ALLOWED_HOSTS = ["192.168.0.110", "62.248.252.141", "lfgdude.ddnsfree.com"]
+ALLOWED_HOSTS = ["62.248.252.141", "lfgdude.ddnsfree.com"]
+if DEBUG:
+    ALLOWED_HOSTS += ["127.0.0.1", "localhost"]
 
 
 # Application definition
@@ -81,16 +83,14 @@ WSGI_APPLICATION = 'lfgdude.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-password = os.getenv('SQL_PASSWORD')
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'djangodb',
-        'USER': 'postgres',
-        'PASSWORD': password,
-        'HOST': '192.168.0.110',
-        'PORT': '5432',
+        'NAME': os.getenv('SQL_SERVER_NAME'),
+        'USER': os.getenv('SQL_USER'),
+        'PASSWORD': os.getenv('SQL_PASSWORD'),
+        'HOST': os.getenv('SQL_HOST'),
+        'PORT': os.getenv('SQL_PORT')
     }
 }
 

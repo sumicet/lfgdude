@@ -2,12 +2,21 @@ from django.db import models
 
 
 # Create your models here.
+class Game(models.Model):
+    name = models.CharField(max_length=256)
+    has_code_join = models.BooleanField(default=False)
+    has_ingame_voice = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.id}: {self.name} - Uses group code: {self.has_code_join} - Ingame voice: {self.has_ingame_voice}"
+
+
 class User(models.Model):
-    id = models.CharField(max_length=16, unique=True, primary_key=True, db_index=True)
+    id = models.CharField(max_length=16, primary_key=True)
     username = models.CharField(max_length=32)
     discriminator = models.IntegerField()
     avatar_hash = models.CharField(max_length=32)
-    banner_hash = models.CharField(max_length=32)
+    banner_hash = models.CharField(max_length=32, blank=True)
     banner_color = models.CharField(max_length=8)
     accent_color = models.IntegerField()
 
@@ -16,8 +25,27 @@ class User(models.Model):
     token_type = models.CharField(max_length=32)
     token_expiration = models.DateTimeField()
 
-    login_hash = models.CharField(max_length=128)
+    login_hash = models.CharField(max_length=128, db_index=True)
     login_hash_expiration = models.DateTimeField()
+
+    group = models.ForeignKey("Lobby", on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):
         return f"{self.username}#{self.discriminator} - id: {self.id} - expires: {self.login_hash_expiration}"
+
+
+class Lobby(models.Model):
+    class Meta:
+        verbose_name_plural = "lobbies"  # Show correct plural in admin console
+
+    title = models.CharField(max_length=100)
+    game = models.ForeignKey(Game, on_delete=models.CASCADE)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    tags = models.CharField(max_length=100)
+    code = models.CharField(max_length=20, blank=True)
+    use_ingame_voice = models.BooleanField(default=False)
+
+    max_players = models.PositiveIntegerField()
+
+    def __str__(self):
+        return f"{self.id}: {self.game.name} - Title: {self.title} - Owner: {self.owner.username}#{self.owner.discriminator}"
