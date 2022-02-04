@@ -58,8 +58,12 @@ code {
                 #5200ff 0px 0px 30px, #5200ff 0px 0px 40px;
         }
 
-        .svg-extra-dark * path {
+        .svg-on-dark-bg * path {
             fill: #0a0a0a;
+        }
+
+        .svg-extra-dark * path {
+            fill: rgba(255, 255, 255, 0.2);
         }
 
         .svg-extra-light * path {
@@ -72,6 +76,10 @@ code {
 
         .svg-medium * path {
             fill: rgba(255, 255, 255, 0.6);
+        }
+
+        .svg-dark * path {
+            fill: rgba(255, 255, 255, 0.4);
         }
 
         .neon {

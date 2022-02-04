@@ -17,7 +17,7 @@ const lobbies: Lobby[] = [
             id: '1',
             name: 'Among Us',
         },
-        leader: {
+        owner: {
             id: '1',
             image: 'https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/10/Gojo-Jujutsu-Kaisen-Eyes-Uncovered.jpg?q=50&fit=crop&w=960&h=500&dpr=1.5',
             username: 'Gojo-senpai',
@@ -51,7 +51,11 @@ const lobbies: Lobby[] = [
             id: '1',
             name: 'Among Us',
         },
-        leader: {
+        vc: {
+            name: '6547',
+            invite: 'https://redux-toolkit.js.org/tutorials/quick-start',
+        },
+        owner: {
             id: '2',
             image: 'https://cdn.realsport101.com/images/ncavvykf/epicstream/1291d35e00f077741819c23a19e5043c0a54e8fc-864x382.png?rect=93,0,679,382&w=700&h=394&dpr=2',
             username: 'Mando',
@@ -79,11 +83,16 @@ const lobbies: Lobby[] = [
         game: {
             id: '1',
             name: 'Among Us',
+            code: 'EEWFWERFERFREFERFR',
         },
-        leader: {
+        owner: {
             id: '2',
             image: 'https://cdn.realsport101.com/images/ncavvykf/epicstream/1291d35e00f077741819c23a19e5043c0a54e8fc-864x382.png?rect=93,0,679,382&w=700&h=394&dpr=2',
             username: 'Mando',
+        },
+        vc: {
+            name: '235',
+            invite: 'https://redux-toolkit.js.org/tutorials/quick-start',
         },
         title: 'Such wow join join long title here!!! Such wow join join long title here!!! join long title here!!! join long title here!!!',
         tags: ['idk', 'competitive'],
@@ -108,8 +117,9 @@ const lobbies: Lobby[] = [
         game: {
             id: '1',
             name: 'Overwatch',
+            code: 'EEWFWERFERFREFERFR',
         },
-        leader: {
+        owner: {
             id: '2',
             image: 'https://cdn.realsport101.com/images/ncavvykf/epicstream/1291d35e00f077741819c23a19e5043c0a54e8fc-864x382.png?rect=93,0,679,382&w=700&h=394&dpr=2',
             username: 'Shiro',
@@ -155,7 +165,7 @@ const Lobbies = ({ className }: LobbiesProps) => {
                     <Text color='extra-dark' className='mr-4'>
                         Can’t find what you’re looking for? Create your own lobby!
                     </Text>
-                    <Button text='New' Icon={plus} color='light' />
+                    <Button text='New' Icon={plus} color='medium' />
                 </div>
             </div>
             <Grid data={lobbies} className='mt-4' />

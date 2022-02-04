@@ -33,7 +33,9 @@ module.exports = {
                 dark: '#111112',
                 medium: '#141415',
                 light: '#1E1E21',
-                extraLight: '#34343F',
+                extraLight: '#2f2f38',
+                doubleExtraLight: '#34343F', // use for hovering on extraLight
+                tripleExtraLight: '#3a3a4a',
                 onDark: '#0D0D0D',
                 accent: 'rgb(194, 0, 116)',
                 textExtraLight: '#FFFFFF',
@@ -41,6 +43,7 @@ module.exports = {
                 textMedium: 'rgba(255, 255, 255, 0.6)',
                 textDark: 'rgba(255, 255, 255, 0.4)',
                 textExtraDark: 'rgba(255, 255, 255, 0.2)', // mostly for placeholders
+                textDoubleExtraDark: 'rgba(255, 255, 255, 0.05)', // same as above
             },
             spacing: {
                 1: '0.3125rem', // 5px

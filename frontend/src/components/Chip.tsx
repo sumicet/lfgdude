@@ -4,10 +4,10 @@ interface ChipProps {
     Icon: any;
     text: string;
     margin?: string;
-    color?: 'extra-light' | 'medium';
+    color?: 'medium' | 'dark' | 'light';
     className?: string;
     textProps?: TextProps;
-    noHoverEffect?: boolean;
+    hover?: boolean;
 }
 
 const Chip = ({
@@ -16,30 +16,46 @@ const Chip = ({
     margin,
     color,
     className = '',
-    textProps,
-    noHoverEffect = false,
+    textProps = {},
+    hover = true,
 }: ChipProps) => {
     return (
         <div
-            className={`flex items-center cursor-pointer ${margin && `m-[${margin}]`}  ${
-                !noHoverEffect && 'group'
+            className={`flex group items-center cursor-pointer ${margin && `m-[${margin}]`}  ${
+                hover && 'group'
             } ease-in-out duration-200 ${
-                color === 'extra-light'
-                    ? 'svg-extra-light'
-                    : color === 'medium'
-                    ? 'svg-medium'
-                    : 'svg-light'
+                color === 'medium' ? 'svg-medium' : color === 'dark' ? 'svg-dark' : 'svg-light'
             } ${className}`}
         >
-            <div className={`mr-2 ${!noHoverEffect ? 'group-hover:svg-extra-light' : ''}`}>
+            <div
+                className={`mr-2 ${
+                    hover
+                        ? color === 'dark'
+                            ? 'group-hover:svg-medium'
+                            : color === 'medium'
+                            ? 'group-hover:svg-light'
+                            : color === 'light'
+                            ? 'group-hover:svg-extra-light'
+                            : ''
+                        : ''
+                }`}
+            >
                 <Icon className='h-[16px]' />
             </div>
             <Text
                 {...textProps}
                 color={color}
-                className={`${!noHoverEffect ? 'group-hover:text-textExtraLight' : ''} ${
-                    textProps?.className || ''
-                }`}
+                className={` w-max ${
+                    hover
+                        ? color === 'dark'
+                            ? 'group-hover:text-textMedium'
+                            : color === 'medium'
+                            ? 'group-hover:text-textLight'
+                            : color === 'light'
+                            ? 'group-hover:text-textExtraLight'
+                            : ''
+                        : ''
+                } ${textProps?.className || ''}`}
             >
                 {text}
             </Text>

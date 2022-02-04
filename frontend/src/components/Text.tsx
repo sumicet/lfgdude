@@ -1,7 +1,7 @@
 import { memo } from 'react';
 
 export interface TextProps {
-    color?: 'extra-light' | 'dark' | 'extra-dark' | 'accent' | 'medium';
+    color?: 'extra-light' | 'dark' | 'extra-dark' | 'accent' | 'medium' | 'light';
     weight?: 'bold' | 'light' | 'medium';
     theme?: 'code' | 'colored';
     size?: 'extra-large' | 'large' | 'small';
@@ -27,7 +27,9 @@ const Text = ({ color, weight, theme, size, className = '', children }: TextProp
                     ? 'leading-small'
                     : 'leading-base'
             } align-middle ${
-                color === 'extra-light'
+                color === 'light'
+                    ? 'text-textLight'
+                    : color === 'extra-light'
                     ? 'text-textExtraLight'
                     : color === 'medium'
                     ? 'text-textMedium'

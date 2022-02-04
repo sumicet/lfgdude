@@ -6,6 +6,7 @@ interface TagsRowProps {
     className?: string;
 }
 
+// pass a different height if you want more than 1 row
 const TagsRow = ({ data, className }: TagsRowProps) => {
     return (
         <Row className={`h-[0.9rem] ${className}`}>

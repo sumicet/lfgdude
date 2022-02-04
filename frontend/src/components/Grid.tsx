@@ -23,13 +23,6 @@ const Grid = ({ data, gap = 4, className }: GridProps) => {
                 ))}
             </Row>
         </Container>
-        // <div className={`flex-wrap flex-row flex-1 ${className}`}>
-        //     {data.map((lobby: any, index: number) => (
-        //         <div key={`${index + 1}`} className={`w-full h-fit ${gap === 4 ? 'mx-2' : 'mx-1'}`}>
-        //             <Card lobby={lobby} />
-        //         </div>
-        //     ))}
-        // </div>
     );
 };
 

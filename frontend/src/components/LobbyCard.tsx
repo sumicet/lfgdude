@@ -7,12 +7,20 @@ import TagsRow from './TagsRow';
 import Text from './Text';
 // @ts-ignore
 import { ReactComponent as HeadsetWithMic } from '../assets/images/headset-with-mic.svg';
+import { useDispatch } from 'react-redux';
+import { setActive } from '../redux/slices/lobbyModalSlice';
 
 interface CardProps {
     lobby: Lobby;
 }
 
 const Card = ({ lobby }: CardProps) => {
+    const dispatch = useDispatch();
+
+    const handleJoinClick = () => {
+        dispatch(setActive({ active: true, lobby }));
+    };
+
     return (
         <div className='flex flex-col bg-light p-4 rounded-base w-full'>
             <div className='flex h-fit items-center w-full'>
@@ -38,7 +46,7 @@ const Card = ({ lobby }: CardProps) => {
                             alt=''
                         />
                     </div>
-                    <Text color='medium'>{lobby.leader.username}</Text>
+                    <Text color='medium'>{lobby.owner.username}</Text>
                 </div>
             </div>
             <Text className={`mt-2 h-[2.4rem] text-on-2-rows`} size='large'>
@@ -49,7 +57,7 @@ const Card = ({ lobby }: CardProps) => {
                 <div className='flex flex-1 items-center mr-4'>
                     <TagsRow data={lobby.tags} />
                 </div>
-                <Button text='Join' color='extra-light' Icon={HeadsetWithMic} />
+                <Button text='Join' color='light' Icon={HeadsetWithMic} onClick={handleJoinClick} />
             </div>
         </div>
     );
