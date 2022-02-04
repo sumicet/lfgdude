@@ -3,7 +3,9 @@ export interface Response<T> {
     errors: Error[];
 }
 
+export type ErrorCode = 404 | 500;
+
 export interface Error {
-    code: number;
+    code: ErrorCode;
     message: string;
 }

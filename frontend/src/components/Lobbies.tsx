@@ -6,6 +6,7 @@ import { ReactComponent as plus } from '../assets/images/plus.svg';
 import { Lobby } from '../models/Lobby';
 import Grid from './Grid';
 import { useGetLobbiesQuery } from '../redux/apis/main/lobby/lobbyApi';
+import { useNavigate } from 'react-router-dom';
 
 interface LobbiesProps {
     className?: string;
@@ -157,10 +158,13 @@ const lobbies: Lobby[] = [
 
 const Lobbies = ({ className }: LobbiesProps) => {
     const { data, isLoading, isError } = useGetLobbiesQuery();
+    const navigate = useNavigate();
 
     useEffect(() => {
-        console.log(data);
-    }, [data]);
+        if (isError) {
+            navigate('/404');
+        }
+    }, [isError]);
 
     return (
         <div

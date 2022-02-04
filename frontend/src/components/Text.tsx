@@ -15,7 +15,7 @@ export interface TextProps {
 //   max-height: 3.6em;
 //   line-height: 1.8em;
 
-const Text = ({ color, weight, theme, size, className = '', children }: TextProps) => {
+const Text = ({ color = 'light', weight, theme, size, className = '', children }: TextProps) => {
     return (
         <p
             className={`${

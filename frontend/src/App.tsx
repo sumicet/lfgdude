@@ -1,9 +1,10 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import Container from './components/layout/Container';
 import LobbyModal from './components/LobbyModal';
 import NavigationBar from './components/NavigationBar';
 import About from './pages/About';
 import Connect from './pages/Connect';
+import Error from './pages/Error';
 import FAQ from './pages/FAQ';
 import Home from './pages/Home';
 
@@ -18,6 +19,8 @@ function App() {
                     <Route path='/faq' element={<FAQ />} />
                     <Route path='/about' element={<About />} />
                     <Route path='/connect' element={<Connect />} />
+                    <Route path='/404' element={<Error code={404} />} />
+                    <Route path='*' element={<Navigate to={{ pathname: '/404' }} />} />
                 </Routes>
             </Container>
 

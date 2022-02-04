@@ -3,12 +3,12 @@ module.exports = {
     theme: {
         extend: {
             screens: {
-                xs: '600px',
-                sm: '850px',
-                md: '1000px',
-                lg: '1250px',
-                xl: '1600px',
-                '2xl': '1800px',
+                xs: { max: '600px' },
+                sm: { max: '850px' },
+                md: { max: '1000px' },
+                lg: { max: '1250px' },
+                xl: { max: '1600px' },
+                '2xl': { max: '1800px' },
             },
             fontFamily: {
                 text: ['Rubik', 'ui-sans-serif', 'system-ui', 'Segoe UI Symbol', 'Arial'],

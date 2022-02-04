@@ -1,5 +1,6 @@
 /* eslint-disable no-nested-ternary */
 import { MiddlewareAPI, isRejectedWithValue, Middleware } from '@reduxjs/toolkit';
+import { ERROR } from '../../constants/messages';
 // import { toast } from 'react-toastify';
 
 /**
@@ -18,7 +19,7 @@ export const errorLogger: Middleware = (api: MiddlewareAPI) => next => action =>
             default:
                 break;
         }
-        console.log('Oops, an unknown error occurred. It be like that sometimes.');
+        console.log(ERROR.default);
         // TODO install react-toastify
         // toast.error(
         //     action.payload.message ||
