@@ -40,6 +40,12 @@ There are thousands of LFG (look for group) discord servers, but none of them pr
 
 #### Frontend
 - (CRA) React + Typescript + Tailwind CSS
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [Framer Motion](https://www.framer.com/docs/introduction/)
+- [react-draggable](https://www.npmjs.com/package/react-draggable)
+- [react-toastify](https://www.npmjs.com/package/react-toastify)
 
 #### Backend
 - Django
+- PostgreSQL
+- Docker
