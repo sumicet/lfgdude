@@ -9,12 +9,16 @@ import Text from './Text';
 import { ReactComponent as HeadsetWithMic } from '../assets/images/headset-with-mic.svg';
 import { useDispatch } from 'react-redux';
 import { setActive } from '../redux/slices/lobbyModalSlice';
+import { useAppSelector } from '../redux/hooks';
 
 interface CardProps {
     lobby: Lobby;
 }
 
 const Card = ({ lobby }: CardProps) => {
+    // TODO modify this: if the user is in a group.. bad method to check
+    const { active: isInAGroup } = useAppSelector(state => state.lobbyModal);
+
     const dispatch = useDispatch();
 
     const handleJoinClick = () => {
@@ -57,7 +61,13 @@ const Card = ({ lobby }: CardProps) => {
                 <div className='flex flex-1 items-center mr-4'>
                     <TagsRow data={lobby.tags} />
                 </div>
-                <Button text='Join' color='light' Icon={HeadsetWithMic} onClick={handleJoinClick} />
+                <Button
+                    text='Join'
+                    color='light'
+                    Icon={HeadsetWithMic}
+                    onClick={handleJoinClick}
+                    className={isInAGroup ? 'invisible' : ''}
+                />
             </div>
         </div>
     );
