@@ -8,10 +8,10 @@ import { ReactComponent as People } from '../assets/images/people.svg';
 // @ts-ignore
 import { ReactComponent as Discord } from '../assets/images/discord.svg';
 import Chip from './Chip';
-import { Link } from 'react-router-dom';
 import { config } from '../config.js';
 import Button from './Button';
 import { memo } from 'react';
+import Link from './Link';
 
 const Header = () => {
     return (
@@ -19,23 +19,19 @@ const Header = () => {
             <div className='flex flex-row flex-1 max-w-[1440px] px-3 py-4'>
                 <div className='flex flex-1 items-center'>
                     <div className='flex items-center mr-6 cursor-pointer'>
-                        <Text size='extra-large' weight='bold' theme='colored'>
-                            {config.appName}
-                        </Text>
+                        <Link to='/'>
+                            <Text size='extra-large' weight='bold' theme='colored'>
+                                {config.appName}
+                            </Text>
+                        </Link>
                     </div>
 
                     {[
-                        { text: 'Find a group', Icon: Headset, pathname: '/' },
-                        { text: 'FAQ', Icon: Question, pathname: '/faq' },
-                        { text: 'About us', Icon: People, pathname: '/about' },
-                    ].map(({ text, Icon, pathname }) => (
-                        <Link
-                            key={`${text}`}
-                            to={{
-                                pathname,
-                            }}
-                            className='mr-6'
-                        >
+                        { text: 'Find a group', Icon: Headset, to: '/' },
+                        { text: 'FAQ', Icon: Question, to: '/faq' },
+                        { text: 'About us', Icon: People, to: '/about' },
+                    ].map(({ text, Icon, to }) => (
+                        <Link key={`${text}`} to={to} className='mr-6'>
                             <Chip text={text} Icon={Icon} />
                         </Link>
                     ))}
