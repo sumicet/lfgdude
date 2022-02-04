@@ -21,7 +21,7 @@ There are thousands of LFG (look for group) discord servers, but none of them pr
 
 - Create a lobby, edit your lobby settings
 - Search for a lobby
-- Filter your search by lobby title, game, hashtags (mic-required, mic-preferref, no-mic, chill, competitive, etc.), and slots.
+- Filter your search by lobby title, game, hashtags (mic-required, mic-preferred, no-mic, chill, competitive, etc.), and slots.
 - Easily share your in-game lobby code for games like Among Us, Phasmophobia, etc.
 - Connect with Discord
 - Invite your friends
@@ -33,13 +33,19 @@ There are thousands of LFG (look for group) discord servers, but none of them pr
 
 ### Design
 
-[Figma design](https://www.figma.com/file/Gp4sfQ6bfDAT9oZaK5mgha/frenweb?node-id=0%3A1)
+[Initial Figma design](https://www.figma.com/file/Gp4sfQ6bfDAT9oZaK5mgha/frenweb?node-id=0%3A1)
 
 
 ### Technologies
 
 #### Frontend
 - (CRA) React + Typescript + Tailwind CSS
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [Framer Motion](https://www.framer.com/docs/introduction/)
+- [react-draggable](https://www.npmjs.com/package/react-draggable)
+- [react-toastify](https://www.npmjs.com/package/react-toastify)
 
 #### Backend
 - Django
+- PostgreSQL
+- Docker
