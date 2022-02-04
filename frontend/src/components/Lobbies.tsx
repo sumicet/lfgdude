@@ -1,10 +1,11 @@
-import { memo } from 'react';
+import { memo, useEffect } from 'react';
 import Button from './Button';
 import Text from './Text';
 // @ts-ignore
 import { ReactComponent as plus } from '../assets/images/plus.svg';
 import { Lobby } from '../models/Lobby';
 import Grid from './Grid';
+import { useGetLobbiesQuery } from '../redux/apis/main/lobby/lobbyApi';
 
 interface LobbiesProps {
     className?: string;
@@ -155,6 +156,12 @@ const lobbies: Lobby[] = [
 ];
 
 const Lobbies = ({ className }: LobbiesProps) => {
+    const { data, isLoading, isError } = useGetLobbiesQuery();
+
+    useEffect(() => {
+        console.log(data);
+    }, [data]);
+
     return (
         <div
             className={`flex bg-medium flex-1 flex-col rounded-base border border-light p-4 ${className}`}

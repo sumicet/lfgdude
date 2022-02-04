@@ -1,17 +1,15 @@
 import { mainApi } from '../mainApi';
+import { Response } from '../types';
 
-const ep = '/lobby';
+const ep = '/get_lobbies';
 
 export const lobbyApi = mainApi.injectEndpoints({
     endpoints: builder => ({
-        // getLobbies: builder.query<
-        //     { status: Status; data: any },
-        //     { orderBy: string; hideError?: boolean }
-        // >({
-        //     query: param => `${ep}/lobby`,
-        // }),
+        getLobbies: builder.query<Response<any>, void>({
+            query: () => `${ep}`,
+        }),
     }),
     overrideExisting: false,
 });
 
-export const {} = lobbyApi;
+export const { useGetLobbiesQuery } = lobbyApi;
