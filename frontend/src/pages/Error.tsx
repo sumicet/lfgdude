@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { memo, useMemo } from 'react';
 import Text from '../components/Text';
 import { ERROR } from '../constants/messages';
 import { ErrorCode } from '../redux/apis/main/types';
@@ -35,4 +35,4 @@ const Error: React.FC<ErrorProps> = ({ code }) => {
     );
 };
 
-export default Error;
+export default memo(Error);

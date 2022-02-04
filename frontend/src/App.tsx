@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Container from './components/layout/Container';
 import LobbyModal from './components/LobbyModal';
-import NavigationBar from './components/NavigationBar';
+import Header from './components/Header';
 import About from './pages/About';
 import Connect from './pages/Connect';
 import Error from './pages/Error';
@@ -11,7 +11,7 @@ import Home from './pages/Home';
 function App() {
     return (
         <div className='flex flex-col w-[100vw] min-h-full min-w-full overflow-y-scroll overflow-x-hidden bg-dark relative'>
-            <NavigationBar />
+            <Header />
 
             <Container>
                 <Routes>

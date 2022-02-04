@@ -85,7 +85,7 @@ const LobbyModal = () => {
                                     text='Join VC'
                                     Icon={() => <Mic />}
                                     color='light'
-                                    link={lobby.vc.invite}
+                                    to={lobby.vc.invite}
                                 />
                             </div>
                         )}

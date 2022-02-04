@@ -13,12 +13,12 @@ import { config } from '../config.js';
 import Button from './Button';
 import { memo } from 'react';
 
-const NavigationBar = () => {
+const Header = () => {
     return (
         <div className='flex justify-center bg-medium text-white border-b border-light z-[1]'>
             <div className='flex flex-row flex-1 max-w-[1440px] px-3 py-4'>
                 <div className='flex flex-1 items-center'>
-                    <div className='flex items-center mr-6'>
+                    <div className='flex items-center mr-6 cursor-pointer'>
                         <Text size='extra-large' weight='bold' theme='colored'>
                             {config.appName}
                         </Text>
@@ -50,11 +50,11 @@ const NavigationBar = () => {
                     >
                         <Chip text='Join Discord' Icon={Discord} />
                     </a>
-                    <Button text='Connect' link={config.discordLink} />
+                    <Button text='Connect' to={config.discordLink} />
                 </div>
             </div>
         </div>
     );
 };
 
-export default memo(NavigationBar);
+export default memo(Header);
