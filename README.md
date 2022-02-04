@@ -21,7 +21,7 @@ There are thousands of LFG (look for group) discord servers, but none of them pr
 
 - Create a lobby, edit your lobby settings
 - Search for a lobby
-- Filter your search by lobby title, game, hashtags (mic-required, mic-preferref, no-mic, chill, competitive, etc.), and slots.
+- Filter your search by lobby title, game, hashtags (mic-required, mic-preferred, no-mic, chill, competitive, etc.), and slots.
 - Easily share your in-game lobby code for games like Among Us, Phasmophobia, etc.
 - Connect with Discord
 - Invite your friends
