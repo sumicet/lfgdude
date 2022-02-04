@@ -33,7 +33,7 @@ There are thousands of LFG (look for group) discord servers, but none of them pr
 
 ### Design
 
-[Figma design](https://www.figma.com/file/Gp4sfQ6bfDAT9oZaK5mgha/frenweb?node-id=0%3A1)
+[Initial Figma design](https://www.figma.com/file/Gp4sfQ6bfDAT9oZaK5mgha/frenweb?node-id=0%3A1)
 
 
 ### Technologies
