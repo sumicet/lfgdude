@@ -15,8 +15,8 @@ function App() {
         <div className='flex flex-col w-[100vw] min-h-full min-w-full overflow-y-scroll overflow-x-hidden bg-dark relative'>
             <ToastContainer
                 position='top-center'
-                autoClose={10500}
-                hideProgressBar={false}
+                autoClose={2500}
+                hideProgressBar
                 newestOnTop
                 closeOnClick
                 rtl={false}

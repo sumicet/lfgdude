@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, useEffect } from 'react';
 import { Lobby } from '../models/Lobby';
 import AvatarsRow from './layout/AvatarsRow';
 import Button from './common/Button';
@@ -10,6 +10,7 @@ import { ReactComponent as HeadsetWithMic } from '../assets/images/headset-with-
 import { useDispatch } from 'react-redux';
 import { setActive } from '../redux/slices/lobbyModalSlice';
 import { useAppSelector } from '../redux/hooks';
+import { motion, useAnimation } from 'framer-motion';
 
 interface CardProps {
     lobby: Lobby;
@@ -24,6 +25,16 @@ const Card = ({ lobby }: CardProps) => {
     const handleJoinClick = () => {
         dispatch(setActive({ active: true, lobby }));
     };
+
+    const animate = useAnimation();
+
+    useEffect(() => {
+        if (isInAGroup) {
+            animate.start({ opacity: 0 });
+        } else {
+            animate.start({ opacity: 1 });
+        }
+    }, [animate, isInAGroup]);
 
     return (
         <div className='flex flex-col bg-light p-4 rounded-base w-full'>
@@ -61,13 +72,19 @@ const Card = ({ lobby }: CardProps) => {
                 <div className='flex flex-1 items-center mr-4'>
                     <TagsRow data={lobby.tags} />
                 </div>
-                <Button
-                    text='Join'
-                    color='light'
-                    Icon={HeadsetWithMic}
-                    onClick={handleJoinClick}
-                    className={isInAGroup ? 'invisible' : ''}
-                />
+                <motion.div
+                    initial={{ opacity: 1 }}
+                    transition={{ duration: 0.1 }}
+                    animate={animate}
+                >
+                    <Button
+                        text='Join'
+                        color='light'
+                        Icon={HeadsetWithMic}
+                        onClick={handleJoinClick}
+                        className={isInAGroup ? 'invisible' : ''}
+                    />
+                </motion.div>
             </div>
         </div>
     );
