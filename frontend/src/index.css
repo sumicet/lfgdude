@@ -50,6 +50,18 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+:root {
+    --toastify-color-dark: #1e1e21 !important;
+    --toastify-color-error: #a60530 !important;
+    --toastify-color-warning: #a67305 !important;
+    --toastify-color-success: #05a655 !important;
+    --toastify-color-info: #8b05a6 !important;
+}
+
+.Toastify__toast {
+    border: 1px solid #2f2f38 !important;
+}
+
 @layer utilities {
     @variants responsive {
         .text-shadow-neon {

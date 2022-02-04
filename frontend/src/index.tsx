@@ -5,6 +5,7 @@ import { Provider as ReduxProvider } from 'react-redux';
 import './index.css';
 import App from './App';
 import store from './redux/store';
+import { ToastContainer } from 'react-toastify';
 
 ReactDOM.render(
     <React.StrictMode>

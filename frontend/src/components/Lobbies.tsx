@@ -7,6 +7,7 @@ import { Lobby } from '../models/Lobby';
 import Grid from './layout/Grid';
 import { useGetLobbiesQuery } from '../redux/apis/main/lobby/lobbyApi';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 interface LobbiesProps {
     className?: string;
@@ -166,6 +167,13 @@ const Lobbies = ({ className }: LobbiesProps) => {
         }
     }, [isError, navigate]);
 
+    const handleNewClick = () => {
+        toast.error('OOps');
+        toast.success('Yay!!');
+        toast.warning('no');
+        toast.info('yes');
+    };
+
     return (
         <div
             className={`flex bg-medium flex-1 flex-col rounded-base border border-light p-4 ${className}`}
@@ -176,7 +184,7 @@ const Lobbies = ({ className }: LobbiesProps) => {
                     <Text color='extra-dark' className='mr-4'>
                         Can’t find what you’re looking for? Create your own lobby!
                     </Text>
-                    <Button text='New' Icon={Plus} color='medium' />
+                    <Button text='New' Icon={Plus} color='medium' onClick={handleNewClick} />
                 </div>
             </div>
             <Grid data={lobbies} className='mt-4' />

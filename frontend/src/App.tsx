@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import Container from './components/layout/Container';
 import LobbyModal from './components/LobbyModal';
 import Header from './components/Header';
@@ -7,10 +8,22 @@ import Connect from './pages/Connect';
 import Error from './pages/Error';
 import FAQ from './pages/FAQ';
 import Home from './pages/Home';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
     return (
         <div className='flex flex-col w-[100vw] min-h-full min-w-full overflow-y-scroll overflow-x-hidden bg-dark relative'>
+            <ToastContainer
+                position='top-center'
+                autoClose={10500}
+                hideProgressBar={false}
+                newestOnTop
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                pauseOnHover
+                theme='dark'
+            />
             <Header />
 
             <Container>
