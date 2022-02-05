@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8bb1048b.css",
+    "main.js": "/static/js/main.d050c133.js",
+    "static/media/Rubik-Regular.ttf": "/static/media/Rubik-Regular.da39336cfcac7980f2f1.ttf",
+    "static/media/Rubik-Medium.ttf": "/static/media/Rubik-Medium.5bd2b2c6ad8019567605.ttf",
+    "static/media/Rubik-SemiBold.ttf": "/static/media/Rubik-SemiBold.52d2adf4cb818e79b61d.ttf",
+    "static/media/Rubik-Bold.ttf": "/static/media/Rubik-Bold.383b8c94b12034c5e8b5.ttf",
+    "static/media/Rubik-Black.ttf": "/static/media/Rubik-Black.2b561a8eed0dced30c19.ttf",
+    "static/media/Rubik-Light.ttf": "/static/media/Rubik-Light.7ee66bf7f540d7bbc3a1.ttf",
+    "static/media/among-us.svg": "/static/media/among-us.3b7a93f348b9b5c7fd764f8eee811e83.svg",
+    "static/media/discord.svg": "/static/media/discord.3c7b7d84cd447214d54486d850b3cd0a.svg",
+    "index.html": "/index.html",
+    "static/media/mic.svg": "/static/media/mic.19bb69817305abd6be37b2ee74b2bb0f.svg",
+    "static/media/fullscreen.svg": "/static/media/fullscreen.29ddff8b1740a6e6c57f951695c1fa45.svg",
+    "static/media/people.svg": "/static/media/people.b679f69cfaa2b3814f18f75ba080dad8.svg",
+    "static/media/copy-to-clipboard.svg": "/static/media/copy-to-clipboard.0cf40b049c077e04e773e3c1ac929d2c.svg",
+    "static/media/headset-with-mic.svg": "/static/media/headset-with-mic.2799b2ddac7ece715b206f1c54eff82f.svg",
+    "static/media/question.svg": "/static/media/question.0a3fe41e6a80d7b469d9fdbbfad6aefe.svg",
+    "static/media/headset.svg": "/static/media/headset.6751b58063abc0f66e401945011df189.svg",
+    "static/media/arrow-up.svg": "/static/media/arrow-up.df28ae66b98422981387837a0f048108.svg",
+    "static/media/arrow-down.svg": "/static/media/arrow-down.0b67a60caf5310c59dd0a379ff4dc4f0.svg",
+    "static/media/plus.svg": "/static/media/plus.92aa5756adc047a08f7da309e21c0578.svg",
+    "main.8bb1048b.css.map": "/static/css/main.8bb1048b.css.map",
+    "main.d050c133.js.map": "/static/js/main.d050c133.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8bb1048b.css",
+    "static/js/main.d050c133.js"
+  ]
+}
