@@ -20,6 +20,8 @@ import { useAppSelector } from '../redux/hooks';
 import { setActive } from '../redux/slices/lobbyModalSlice';
 import { useDispatch } from 'react-redux';
 
+const SIZE_TRANSITION_DURATION = 0.1;
+
 const LobbyModal = () => {
     const { active, size, lobby } = useAppSelector(state => state.lobbyModal);
 
@@ -39,25 +41,36 @@ const LobbyModal = () => {
         }
     }, [active, animate]);
 
-    const handleArrowClick = () => {
-        if (size === 'minimized') {
-            animateContent.start({ height: 'fit-content', opacity: 1 });
-            animate.start({ width: 400 });
-        } else if (size === 'default') {
-            animateContent.start({ height: 0, opacity: 0 });
-            animate.start({
-                width: 260,
-                transition: { duration: 0.1, ease: 'easeInOut' },
-            });
-        } else {
-            animateContent.start({ height: 1000, opacity: 1 });
-            animate.start({ width: 1000 });
-        }
-
+    const handleArrowClick = async () => {
         if (size === 'minimized') {
             dispatch(setActive({ size: 'default' }));
         } else {
             dispatch(setActive({ size: 'minimized' }));
+        }
+
+        if (size === 'minimized') {
+            await Promise.all([
+                animateContent.start({ height: 'fit-content' }),
+                animate.start({
+                    width: 400,
+                    transition: { duration: SIZE_TRANSITION_DURATION, ease: 'linear' },
+                }),
+            ]);
+            animateContent.set({ opacity: 1 });
+        } else if (size === 'default') {
+            animateContent.set({ opacity: 0 });
+            animateContent.start({ height: 0 });
+            animate.start({
+                width: 260,
+                transition: { duration: SIZE_TRANSITION_DURATION, ease: 'linear' },
+            });
+        } else {
+            animateContent.set({ opacity: 1 });
+            animateContent.start({ height: 1000, opacity: 1 });
+            animate.start({
+                width: 1000,
+                transition: { duration: SIZE_TRANSITION_DURATION, ease: 'linear' },
+            });
         }
     };
 
@@ -107,7 +120,7 @@ const LobbyModal = () => {
                             className='flex flex-col overflow-hidden'
                             initial={{ height: 'fit-content' }}
                             animate={animateContent}
-                            transition={{ duration: 0.1, ease: 'easeInOut' }}
+                            transition={{ duration: SIZE_TRANSITION_DURATION, ease: 'linear' }}
                         >
                             {lobby.game.code && (
                                 <Chip
@@ -124,7 +137,7 @@ const LobbyModal = () => {
                             )}
                             {lobby.vc && (
                                 <div className='flex flex-1 items-center mt-4'>
-                                    <Text color='dark' className='mr-4 inline'>
+                                    <Text color='dark' className='mr-4 inline text-on-2-rows'>
                                         This lobby is connected to voice channel{' '}
                                         <span className='font-medium'>#{lobby.vc.name}</span>.
                                     </Text>
@@ -138,7 +151,9 @@ const LobbyModal = () => {
                             )}
 
                             <div className='flex flex-col mt-4'>
-                                <Text size='large'>{lobby.title}</Text>
+                                <Text size='large' className='text-on-2-rows h-[2.1rem]'>
+                                    {lobby.title}
+                                </Text>
                                 <TagsRow className='mt-2 h-max' data={lobby.tags} />
                             </div>
 
