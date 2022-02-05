@@ -83,7 +83,7 @@ const LobbyModal = () => {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.1, ease: 'easeInOut' }}
                     // 340px + 2px border
-                    className='flex absolute z-10 top-[20vh] right-0 w-[400px] h-min rounded-base rounded-r-none bg-light border border-extraLight p-4'
+                    className='flex fixed z-10 top-[20vh] right-0 w-[400px] h-min rounded-base rounded-r-none bg-light border border-extraLight p-4'
                 >
                     <div className='w-full h-full flex flex-col'>
                         <div className='flex items-center'>

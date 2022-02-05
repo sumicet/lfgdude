@@ -36,7 +36,6 @@ function App() {
                     <Route path='*' element={<Navigate to={{ pathname: '/404' }} />} />
                 </Routes>
             </Container>
-
             <LobbyModal />
         </div>
     );

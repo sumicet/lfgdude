@@ -62,6 +62,26 @@ code {
     border: 1px solid #2f2f38 !important;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #1e1e21;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #2f2f38;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #34343f;
+}
+
 @layer utilities {
     .text-shadow-neon {
         text-shadow: #fff 0px 0px 4px, #5200ff 0px 0px 2px, #5200ff 0px 0px 3px, #5200ff 0px 0px 4px,
