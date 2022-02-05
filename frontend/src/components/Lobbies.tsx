@@ -5,8 +5,8 @@ import Text from './common/Text';
 import { ReactComponent as Plus } from '../assets/images/plus.svg';
 import { Lobby } from '../models/Lobby';
 import Grid from './layout/Grid';
-import { useGetLobbiesQuery } from '../redux/apis/main/lobby/lobbyApi';
-import { useNavigate } from 'react-router-dom';
+// import { useGetLobbiesQuery } from '../redux/apis/main/lobby/lobbyApi';
+// import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 interface LobbiesProps {
@@ -158,14 +158,14 @@ const lobbies: Lobby[] = [
 ];
 
 const Lobbies = ({ className }: LobbiesProps) => {
-    const { data, isLoading, isError } = useGetLobbiesQuery();
-    const navigate = useNavigate();
+    // const { data, isLoading, isError } = useGetLobbiesQuery();
+    // const navigate = useNavigate();
 
-    useEffect(() => {
-        if (isError) {
-            navigate('/404');
-        }
-    }, [isError, navigate]);
+    // useEffect(() => {
+    //     if (isError) {
+    //         navigate('/404');
+    //     }
+    // }, [isError, navigate]);
 
     const handleNewClick = () => {
         toast.error('OOps');
