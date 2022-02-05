@@ -4,25 +4,16 @@ import Text, { TextProps } from './common/Text';
 interface ChipProps {
     Icon: ElementType;
     text: string;
-    margin?: string;
     color?: 'medium' | 'dark' | 'light';
     className?: string;
     textProps?: TextProps;
     hover?: boolean;
 }
 
-const Chip = ({
-    Icon,
-    text,
-    margin,
-    color,
-    className = '',
-    textProps = {},
-    hover = true,
-}: ChipProps) => {
+const Chip = ({ Icon, text, color, className = '', textProps = {}, hover = true }: ChipProps) => {
     return (
         <div
-            className={`flex group items-center cursor-pointer ${margin && `m-[${margin}]`}  ${
+            className={`flex group items-center cursor-pointer ${
                 hover && 'group'
             } ease-in-out duration-200 ${
                 color === 'medium' ? 'svg-medium' : color === 'dark' ? 'svg-dark' : 'svg-light'

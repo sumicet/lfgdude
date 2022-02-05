@@ -63,77 +63,75 @@ code {
 }
 
 @layer utilities {
-    @variants responsive {
-        .text-shadow-neon {
-            text-shadow: #fff 0px 0px 4px, #5200ff 0px 0px 2px, #5200ff 0px 0px 3px,
-                #5200ff 0px 0px 4px, #5200ff 0px 0px 5px, #5200ff 0px 0px 7px, #5200ff 0px 0px 20px,
-                #5200ff 0px 0px 30px, #5200ff 0px 0px 40px;
-        }
+    .text-shadow-neon {
+        text-shadow: #fff 0px 0px 4px, #5200ff 0px 0px 2px, #5200ff 0px 0px 3px, #5200ff 0px 0px 4px,
+            #5200ff 0px 0px 5px, #5200ff 0px 0px 7px, #5200ff 0px 0px 20px, #5200ff 0px 0px 30px,
+            #5200ff 0px 0px 40px;
+    }
 
-        .svg-on-dark-bg * path {
-            fill: #0a0a0a;
-        }
+    .svg-on-dark-bg * path {
+        fill: #0a0a0a;
+    }
 
-        .svg-extra-dark * path {
-            fill: rgba(255, 255, 255, 0.2);
-        }
+    .svg-extra-dark * path {
+        fill: rgba(255, 255, 255, 0.2);
+    }
 
-        .svg-extra-light * path {
-            fill: white;
-        }
+    .svg-extra-light * path {
+        fill: white;
+    }
 
-        .svg-light * path {
-            fill: rgba(255, 255, 255, 0.8);
-        }
+    .svg-light * path {
+        fill: rgba(255, 255, 255, 0.8);
+    }
 
-        .svg-medium * path {
-            fill: rgba(255, 255, 255, 0.6);
-        }
+    .svg-medium * path {
+        fill: rgba(255, 255, 255, 0.6);
+    }
 
-        .svg-dark * path {
-            fill: rgba(255, 255, 255, 0.4);
-        }
+    .svg-dark * path {
+        fill: rgba(255, 255, 255, 0.4);
+    }
 
-        .neon {
-            filter: drop-shadow(#fff 0px 0px 1px) drop-shadow(#5200ff 0px 0px 2px)
-                drop-shadow(#5200ff 0px 0px 3px);
-        }
+    .neon {
+        filter: drop-shadow(#fff 0px 0px 1px) drop-shadow(#5200ff 0px 0px 2px)
+            drop-shadow(#5200ff 0px 0px 3px);
+    }
 
-        input {
-            outline: 0px;
-        }
+    input {
+        outline: 0px;
+    }
 
-        .text-on-2-rows {
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-        }
+    .text-on-2-rows {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
 
-        .gradient {
-            background: linear-gradient(
-                90deg,
-                rgb(28, 160, 217),
-                rgb(63, 38, 191),
-                rgb(194, 0, 116),
-                rgb(63, 38, 191),
-                rgb(28, 160, 217)
-            );
-        }
+    .gradient {
+        background: linear-gradient(
+            90deg,
+            rgb(28, 160, 217),
+            rgb(63, 38, 191),
+            rgb(194, 0, 116),
+            rgb(63, 38, 191),
+            rgb(28, 160, 217)
+        );
+    }
 
-        .gradient-text {
-            background-color: #f3ec78;
-            background-image: linear-gradient(
-                90deg,
-                rgb(194, 0, 116),
-                rgb(63, 38, 191),
-                rgb(28, 160, 217)
-            );
-            background-size: 500%;
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -moz-text-fill-color: transparent;
-        }
+    .gradient-text {
+        background-color: #f3ec78;
+        background-image: linear-gradient(
+            90deg,
+            rgb(194, 0, 116),
+            rgb(63, 38, 191),
+            rgb(28, 160, 217)
+        );
+        background-size: 500%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
     }
 }
