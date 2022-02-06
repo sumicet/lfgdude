@@ -165,7 +165,7 @@ const LobbyModal = () => {
 
                             <div className='flex mt-4'>
                                 <Button
-                                    text='Get The F*ck Out'
+                                    text='Leave'
                                     color='light'
                                     className='w-full'
                                     onClick={handleLeaveClick}

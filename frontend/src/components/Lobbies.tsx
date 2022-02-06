@@ -23,7 +23,7 @@ const lobbies: Lobby[] = [
         owner: {
             id: '1',
             image: 'https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/10/Gojo-Jujutsu-Kaisen-Eyes-Uncovered.jpg?q=50&fit=crop&w=960&h=500&dpr=1.5',
-            username: 'Gojo-senpai',
+            username: 'Gojj',
         },
         title: 'wow amazing title',
         tags: ['chill', 'easy', 'competitive', '4th tag'],
@@ -125,7 +125,7 @@ const lobbies: Lobby[] = [
         owner: {
             id: '2',
             image: 'https://cdn.realsport101.com/images/ncavvykf/epicstream/1291d35e00f077741819c23a19e5043c0a54e8fc-864x382.png?rect=93,0,679,382&w=700&h=394&dpr=2',
-            username: 'Shiro',
+            username: 'Shrimp',
         },
         title: 'Such wow join join long title here!!! Such wow join join long title here!!! join long title here!!!',
         tags: ['competitive'],
